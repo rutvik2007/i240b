@@ -408,6 +408,55 @@ $(DEPDIR):
 #add a target to include all DEPFILES
 $(DEPFILES):
 include $(wildcard $(DEPFILES))
-rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ 
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ nano Makefile
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ make dist
+make: *** No rule to make target 'fns-compare.tar', needed by 'dist'.  Stop.
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ nano Makefile
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ make dist
+tar -cf dist Makefile linear.cc nlg.cc fact.cc lg.cc cubic.cc exponential.cc fns-compare.cc constant.cc quadratic.cc fns-compare.hh
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ ls
+constant.cc  exponential.cc  fns-compare.cc  linear.cc	quadratic.cc
+constant.o   exponential.o   fns-compare.hh  linear.o	quadratic.o
+cubic.cc     fact.cc	     fns-compare.o   Makefile
+cubic.o      fact.o	     lg.cc	     nlg.cc
+dist	     fns-compare     lg.o	     nlg.o
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ rm dist 
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ nano Makefile
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ make dist
+tar -cf fns-compare.tar Makefile linear.cc nlg.cc fact.cc lg.cc cubic.cc exponential.cc fns-compare.cc constant.cc quadratic.cc fns-compare.hh
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ ls
+constant.cc	exponential.o	fns-compare.hh	 linear.cc  quadratic.cc
+constant.o	fact.cc		fns-compare.o	 linear.o   quadratic.o
+cubic.cc	fact.o		fns-compare.tar  Makefile
+cubic.o		fns-compare	lg.cc		 nlg.cc
+exponential.cc	fns-compare.cc	lg.o		 nlg.o
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ mkdir -p ~/tmp/fns-compare
+rsaptar2@remote00:~/i240b/work/lab1/exercises/5-auto-dependencies$ cd ~/tmp/fns-compare
+rsaptar2@remote00:~/tmp/fns-compare$ tar -xvf ~/i240b/work/lab1/5*/fns-compare.tar
+tar: /home/rsaptar2/i240b/work/lab1/5*/fns-compare.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+rsaptar2@remote00:~/tmp/fns-compare$ tar -xvf ~/i240b/work/lab1/exercises/5-auto-dependencies/fns-compare.tar 
+Makefile
+linear.cc
+nlg.cc
+fact.cc
+lg.cc
+cubic.cc
+exponential.cc
+fns-compare.cc
+constant.cc
+quadratic.cc
+fns-compare.hh
+rsaptar2@remote00:~/tmp/fns-compare$ make
+g++ -MT linear.o -MMD -MP -MF .deps/linear.d -g -Wall -std=c++17 -c linear.cc
+g++ -MT fact.o -MMD -MP -MF .deps/fact.d -g -Wall -std=c++17 -c fact.cc
+g++ -MT nlg.o -MMD -MP -MF .deps/nlg.d -g -Wall -std=c++17 -c nlg.cc
+g++ -MT cubic.o -MMD -MP -MF .deps/cubic.d -g -Wall -std=c++17 -c cubic.cc
+g++ -MT exponential.o -MMD -MP -MF .deps/exponential.d -g -Wall -std=c++17 -c exponential.cc
+g++ -MT fns-compare.o -MMD -MP -MF .deps/fns-compare.d -g -Wall -std=c++17 -c fns-compare.cc
+g++ -MT constant.o -MMD -MP -MF .deps/constant.d -g -Wall -std=c++17 -c constant.cc
+g++ -MT quadratic.o -MMD -MP -MF .deps/quadratic.d -g -Wall -std=c++17 -c quadratic.cc
+g++ -MT lg.o -MMD -MP -MF .deps/lg.d -g -Wall -std=c++17 -c lg.cc
+g++ linear.o fact.o nlg.o cubic.o exponential.o fns-compare.o constant.o quadratic.o lg.o -o fns-compare
 
 
