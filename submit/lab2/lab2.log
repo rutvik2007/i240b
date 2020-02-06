@@ -1,0 +1,361 @@
+Script started on 2020-02-05 16:01:38-0500
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2[00m$ cd exercises/1-hello/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ ls
+hello.cc  Makefile  README
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ ls -l
+total 12
+-rw-r--r-- 1 rutvik rutvik 363 Feb  5 15:28 hello.cc
+-rw-r--r-- 1 rutvik rutvik  57 Feb  5 15:28 Makefile
+-rw-r--r-- 1 rutvik rutvik  61 Feb  5 15:28 README
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ cat README 
+Print out a line saying hello to each command-line argument.
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ ./hello 
+usage: ./hello NAME...
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ ./hello bart lisa
+hello bart
+hello lisa
+hello ]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ gdb he
+GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+he: No such file or directory.
+(gdb) quit
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ gdb hello 
+GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) start bart lisa[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kb main
+Breakpoint 1 at 0x992: file hello.cc, line 13.
+(gdb) sart[K[K[Ktart bart lisa
+Temporary breakpoint 2 at 0x992: file hello.cc, line 13.
+Starting program: /home/rutvik/Desktop/cs240/i240b/work/lab2/exercises/1-hello/hello bart lisa
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffdf88) at hello.cc:13
+13	  if (argc == 1) {
+(gdb) l
+8	}
+9	
+10	int 
+11	main(int argc, const char *argv[])
+12	{
+13	  if (argc == 1) {
+14	    std::cerr << "usage: " << argv[0] << " NAME..." << std::endl;
+15	    std::exit(1);
+16	  }
+17	  else {
+(gdb) p argc
+$1 = 3
+(gdb) p argv
+$2 = (const char **) 0x7fffffffdf88
+(gdb) p argv[0] 
+$3 = 0x7fffffffe2c7 "/home/rutvik/Desktop/cs240/i240b/work/lab2/exercises/1-hello/hello"
+(gdb) p argv[0] [C[1P[1@1
+$4 = 0x7fffffffe30a "bart"
+(gdb) p argv[1] [C[1P[1@2
+$5 = 0x7fffffffe30f "lisa"
+(gdb) n
+18	    for (int i = 1; i <= argc; i++) {
+(gdb) b Hhandle_intel.constprop [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ke[K[KHell[K[K[K[Khrl[K[Kello.cc:[K[K[K[K[K[K[K[K[K[K[Kc
+Continuing.
+hello bart
+hello lisa
+hello [Inferior 1 (process 9825) exited normally]
+(gdb) start bart los[K[Kisa
+Temporary breakpoint 3 at 0x555555554992: file hello.cc, line 13.
+Starting program: /home/rutvik/Desktop/cs240/i240b/work/lab2/exercises/1-hello/hello bart lisa
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffdf88) at hello.cc:13
+13	  if (argc == 1) {
+(gdb) l
+8	}
+9	
+10	int 
+11	main(int argc, const char *argv[])
+12	{
+13	  if (argc == 1) {
+14	    std::cerr << "usage: " << argv[0] << " NAME..." << std::endl;
+15	    std::exit(1);
+16	  }
+17	  else {
+(gdb) l
+18	    for (int i = 1; i <= argc; i++) {
+19	      sayHello(argv[i]);
+20	    }
+21	  }
+22	}
+(gdb) b sayHello(char const*) [K[K[K[K[K[K[K[K[K[K[K[K[K[K
+Breakpoint 4 at 0x555555554946: file hello.cc, line 7.
+(gdb) n
+18	    for (int i = 1; i <= argc; i++) {
+(gdb) n
+19	      sayHello(argv[i]);
+(gdb) n
+
+Breakpoint 4, sayHello (name=0x7fffffffe30a "bart") at hello.cc:7
+7	  std::cout << "hello " << name << std::endl;
+(gdb) backtrace 
+#0  sayHello (name=0x7fffffffe30a "bart") at hello.cc:7
+#1  0x0000555555554a1c in main (argc=3, argv=0x7fffffffdf88) at hello.cc:19
+(gdb) p argc
+No symbol "argc" in current context.
+(gdb) up
+#1  0x0000555555554a1c in main (argc=3, argv=0x7fffffffdf88) at hello.cc:19
+19	      sayHello(argv[i]);
+(gdb) p argc 
+$6 = 3
+(gdb) p argc[2]
+cannot subscript something of type `int'
+(gdb) p argc[2][C[1P[2]v[2]
+$7 = 0x7fffffffe30f "lisa"
+(gdb) c
+Continuing.
+hello bart
+
+Breakpoint 4, sayHello (name=0x7fffffffe30f "lisa") at hello.cc:7
+7	  std::cout << "hello " << name << std::endl;
+(gdb) c
+Continuing.
+hello lisa
+
+Breakpoint 4, sayHello (name=0x0) at hello.cc:7
+7	  std::cout << "hello " << name << std::endl;
+(gdb) up
+#1  0x0000555555554a1c in main (argc=3, argv=0x7fffffffdf88) at hello.cc:19
+19	      sayHello(argv[i]);
+(gdb) p argc
+$8 = 3
+(gdb) p i
+$9 = 3
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 10038] will be killed.
+
+Quit anyway? (y or n) y
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ nano hello.cc 
+[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;43H(B[0;7m[ Reading File ](B[m[53;49H(B[0;7m 22 lines ](B[m[H(B[0;7m  GNU nano 2.9.3                                 hello.cc                                            [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Uncut Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[3d(B[0;1m[36m#include[39m(B[m (B[0;1m[33m<iostream>[4d[36m#include[39m(B[m (B[0;1m[33m<cstdlib>[6d(B[0m[32mstatic[39m(B[m [32mvoid[7d[39m(B[msayHello([32mconst[39m(B[m [32mchar[39m(B[m *name)[8d{[9d std::cout << (B[0;1m[33m"hello "[39m(B[m << name << std::endl;[10d}[12d[32mint[39m[42m [13d[49m(B[mmain([32mint[39m(B[m argc, [32mconst[39m(B[m [32mchar[39m(B[m *argv[])[14d{[15d (B[0;1m[33mif[39m(B[m (argc == 1) {[16;5Hstd::cerr << (B[0;1m[33m"usage: "[39m(B[m << argv[0] << (B[0;1m[33m" NAME..."[39m(B[m << std::endl;[17;5Hstd::exit(1);[18;3H}[19d(B[0;1m[33melse[39m(B[m {[20;5H(B[0;1m[33mfor[39m(B[m ([32mint[39m(B[m i = 1; i <= argc; i++) {[21;7HsayHello(argv[i]);[22;5H}[23;3H}[24d}[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[A[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[53d[K[21;7H[?12l[?25h[?25ls[?12l[?25h[?25la[?12l[?25h[?25ly[?12l[?25h[?25lH[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25ll[?12l[?25h[?25lo[?12l[?25h[?25l([?12l[?25h[?25la[?12l[?25h[?25lr[?12l[?25h[?25lg[?12l[?25h[?25lv[?12l[?25h[?25l[[?12l[?25h[?25li[?12l[?25h[?25l][?12l[?25h[?25l)[?12l[?25h[?25l[A[?12l[?25h[?25l=[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[20;24H[1P[?12l[?25h[?25l[1;100H[1;92H(B[0;7m        (B[m[53;42H(B[0;7m[ Wrote 22 lines ](B[m[20;24H[?12l[?25h[?25l[53d[J[55;101H[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ ./hello bart lisa
+hello bart
+hello lisa
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/1-hello[00m$ cd ..
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises[00m$ cd 2-hello/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ la
+.gitignore  hello.cc  Makefile  README
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ll
+total 24
+drwxr-xr-x 2 rutvik rutvik 4096 Feb  5 15:28 [0m[01;34m.[0m/
+drwxr-xr-x 5 rutvik rutvik 4096 Feb  5 15:28 [01;34m..[0m/
+-rw-r--r-- 1 rutvik rutvik    5 Feb  5 15:28 .gitignore
+-rw-r--r-- 1 rutvik rutvik 1011 Feb  5 15:28 hello.cc
+-rw-r--r-- 1 rutvik rutvik   39 Feb  5 15:28 Makefile
+-rw-r--r-- 1 rutvik rutvik  161 Feb  5 15:28 README
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ mkae
+
+Command 'mkae' not found, did you mean:
+
+  command 'make' from deb make
+  command 'make' from deb make-guile
+
+Try: sudo apt install <deb name>
+
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ./hello bar[K[K[K'lisa simpson ' 'bart simpson'
+Hello Lisa SimpsonÌU
+Hello Bart SimpsonÌU
+Segmentation fault (core dumped)
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ./ [Khello bart lisa
+Hello Bartü
+Hello Lisaü
+Segmentation fault (core dumped)
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ gdb he[K[K[K hello
+GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) b main
+Breakpoint 1 at 0xbc6: file hello.cc, line 35.
+(gdb) b sayHello(char const*) [K[K[K[K[K[K[K[K[K[K[K[K[K[K
+Breakpoint 2 at 0xb71: file hello.cc, line 29.
+(gdb) n
+The program is not being run.
+(gdb) start 'baart [K[K[K[Krt simp' 'lisa simp'
+Temporary breakpoint 3 at 0xbc6: file hello.cc, line 35.
+Starting program: /home/rutvik/Desktop/cs240/i240b/work/lab2/exercises/2-hello/hello 'bart simp' 'lisa simp'
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffdf78) at hello.cc:35
+35	{
+(gdb) l
+30	}
+31	
+32	
+33	int
+34	main(int argc, const char *argv[])
+35	{
+36	  if (argc == 1) {
+37	    std::cerr << "usage: " << argv[0] << " NAME..." << std::endl;
+38	    std::exit(1);
+39	  }
+(gdb) n
+36	  if (argc == 1) {
+(gdb) n
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) n
+46	    }
+(gdb) n
+42	      const char *name = argv[i];
+(gdb) 
+43	      char friendlyName[strlen(name)];
+(gdb) n[Kl
+38	    std::exit(1);
+39	  }
+40	  else {
+41	    for (int i = 1; i <= argc; i++) {
+42	      const char *name = argv[i];
+43	      char friendlyName[strlen(name)];
+44	      upcaseWords(name, friendlyName);
+45	      sayHello(friendlyName);
+46	    }
+47	  }
+(gdb) n
+44	      upcaseWords(name, friendlyName);
+(gdb) n
+45	      sayHello(friendlyName);
+(gdb) p fr[K[KfriendlyName 
+$1 = "Bart Simp"
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 10159] will be killed.
+
+Quit anyway? (y or n) y
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ nano hee[Kllo.cc 
+[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;43H(B[0;7m[ Reading File ](B[m[53;49H(B[0;7m 48 lines ](B[m[H(B[0;7m  GNU nano 2.9.3                                 hello.cc                                            [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Uncut Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[3d(B[0;1m[36m#include[39m(B[m (B[0;1m[33m<locale>[4d[36m#include[39m(B[m (B[0;1m[33m<iostream>[5d[36m#include[39m(B[m (B[0;1m[33m<cstdlib>[6d[36m#include[39m(B[m (B[0;1m[33m<cstring>[8d[34m/** Upcase the initial letter of each word from in, copying the[9d *  results into out.  The caller is responsible to ensure that out[10d *  has enough space for the strlen(in) characters of in.[11d */[12d(B[0m[32mvoid[13d[39m(B[mupcaseWords([32mconst[39m(B[m [32mchar[39m(B[m in[], [32mchar[39m(B[m out[])[14d{[15d [32mbool[39m(B[m inWord = false;[16;3H[32mconst[39m(B[m [32mint[39m(B[m n = std::strlen(in);[17;3H(B[0;1m[33mfor[39m(B[m ([32mint[39m(B[m i = 0; i < n; i++) {[18;5H(B[0;1m[33mif[39m(B[m (!inWord && std::isalpha(in[i])) {[19;7Hout[i] = std::toupper(in[i]);[20;5H}[21d(B[0;1m[33melse[39m(B[m {[22;7Hout[i] = in[i];[23;5H}[24dinWord = std::isalpha(in[i]);[25;3H}[26d}[28d[32mstatic[39m(B[m [32mvoid[29d[39m(B[msayHello([32mconst[39m(B[m [32mchar[39m(B[m *name)[30d{[31d std::cout << (B[0;1m[33m"Hello "[39m(B[m << name << std::endl;[32d}[35d[32mint[36d[39m(B[mmain([32mint[39m(B[m argc, [32mconst[39m(B[m [32mchar[39m(B[m *argv[])[37d{[38d (B[0;1m[33mif[39m(B[m (argc == 1) {[39;5Hstd::cerr << (B[0;1m[33m"usage: "[39m(B[m << argv[0] << (B[0;1m[33m" NAME..."[39m(B[m << std::endl;[40;5Hstd::exit(1);[41;3H}[42d(B[0;1m[33melse[39m(B[m {[43;5H(B[0;1m[33mfor[39m(B[m ([32mint[39m(B[m i = 1; i <= argc; i++) {[44;7H[32mconst[39m(B[m [32mchar[39m(B[m *name = argv[i];[45;7H[32mchar[39m(B[m friendlyName[strlen(name)];[46;7HupcaseWords(name, friendlyName);[47;7HsayHello(friendlyName);[48;5H}[49;3H}[50d}[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[24d[?12l[?25h[?25l[25d[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[28d[?12l[?25h[?25l[53d[K[29d[?12l[?25h[?25l[30d[?12l[?25h[?25l[31d[?12l[?25h[?25l[32d[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[A[?12l[?25h[?25l [?12l[?25h[?25l[A[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25l([?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25l [?12l[?25h[?25l=[?12l[?25h[?25l [?12l[?25h[?25l1[?12l[?25h[?25l;[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25l [?12l[?25h[?25l<[?12l[?25h[?25l=[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[43;24H[1P[?12l[?25h[?25l[44d[?12l[?25h[?25l[A[?12l[?25h[?25l[42;9H[?12l[?25h[?25l[?12l[?25h[?25l[A[?12l[?25h[?25l[A std[?12l[?25h[?25l[A[?12l[?25h[?25l[40d[?12l[?25h[?25l[41;4H[?12l[?25h[?25l[42;8H[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A std[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A{[?12l[?25h[?25l[36;8H[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A}[?12l[?25h[?25l[31;8H[?12l[?25h[?25l[A{[?12l[?25h[?25l[29;8H[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A}[?12l[?25h[?25l[A }[?12l[?25h[?25l[A inW[?12l[?25h[?25l[25;4H[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[28;8H[?12l[?25h[?25l[29d[?12l[?25h[?25l[30d{[?12l[?25h[?25l[31;8H[?12l[?25h[?25l[32d}[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35;4H[?12l[?25h[?25l[36;8H[?12l[?25h[?25l[37d{[?12l[?25h[?25l[38;8H[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41;4H[?12l[?25h[?25l[42;8H[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25lr[?12l[?25h[?25li[?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25ll[?12l[?25h[?25ly[?12l[?25h[?25lN[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l[[?12l[?25h[?25ls[?12l[?25h[?25lt[?12l[?25h[?25lr[?12l[?25h[?25ll[?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25l([?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l)[?12l[?25h[?25l+];[?12l[?25h[?25l[1;100H[1;92H(B[0;7m        (B[m[53;42H(B[0;7m[ Wrote 48 lines ](B[m[45;38H[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[45;38H1];[?12l[?25h[?25l[1;100H[1;92H(B[0;7m        (B[m[53;60H[45;39H[?12l[?25h[?25l[1;100H[53;60H[45;39H[?12l[?25h[?25l[53d[J[55;101H[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ./helll [K[Ko 'bart simp' ' lisa simp'
+Hello Bart SimpÜ3tŠU
+Hello Lisa SimpÜ3tŠU
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ./hello 'bart simp' 'llisa simp'[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ make[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnano hello.cc make[Knano hello.cc 
+[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;43H(B[0;7m[ Reading File ](B[m[53;49H(B[0;7m 48 lines ](B[m[H(B[0;7m  GNU nano 2.9.3                                 hello.cc                                            [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Uncut Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[3d(B[0;1m[36m#include[39m(B[m (B[0;1m[33m<locale>[4d[36m#include[39m(B[m (B[0;1m[33m<iostream>[5d[36m#include[39m(B[m (B[0;1m[33m<cstdlib>[6d[36m#include[39m(B[m (B[0;1m[33m<cstring>[8d[34m/** Upcase the initial letter of each word from in, copying the[9d *  results into out.  The caller is responsible to ensure that out[10d *  has enough space for the strlen(in) characters of in.[11d */[12d(B[0m[32mvoid[13d[39m(B[mupcaseWords([32mconst[39m(B[m [32mchar[39m(B[m in[], [32mchar[39m(B[m out[])[14d{[15d [32mbool[39m(B[m inWord = false;[16;3H[32mconst[39m(B[m [32mint[39m(B[m n = std::strlen(in);[17;3H(B[0;1m[33mfor[39m(B[m ([32mint[39m(B[m i = 0; i < n; i++) {[18;5H(B[0;1m[33mif[39m(B[m (!inWord && std::isalpha(in[i])) {[19;7Hout[i] = std::toupper(in[i]);[20;5H}[21d(B[0;1m[33melse[39m(B[m {[22;7Hout[i] = in[i];[23;5H}[24dinWord = std::isalpha(in[i]);[25;3H}[26d}[28d[32mstatic[39m(B[m [32mvoid[29d[39m(B[msayHello([32mconst[39m(B[m [32mchar[39m(B[m *name)[30d{[31d std::cout << (B[0;1m[33m"Hello "[39m(B[m << name << std::endl;[32d}[35d[32mint[36d[39m(B[mmain([32mint[39m(B[m argc, [32mconst[39m(B[m [32mchar[39m(B[m *argv[])[37d{[38d (B[0;1m[33mif[39m(B[m (argc == 1) {[39;5Hstd::cerr << (B[0;1m[33m"usage: "[39m(B[m << argv[0] << (B[0;1m[33m" NAME..."[39m(B[m << std::endl;[40;5Hstd::exit(1);[41;3H}[42d(B[0;1m[33melse[39m(B[m {[43;5H(B[0;1m[33mfor[39m(B[m ([32mint[39m(B[m i = 1; i < argc; i++) {[44;7H[32mconst[39m(B[m [32mchar[39m(B[m *name = argv[i];[45;7H[32mchar[39m(B[m friendlyName[strlen(name)+1];[46;7HupcaseWords(name, friendlyName);[47;7HsayHello(friendlyName);[48;5H}[49;3H}[50d}[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[53d[K[18;4H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[24d[?12l[?25h[?25l[25d[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[28;2H[?12l[?25h[?25l[?12l[?25h[?25l[A[?12l[?25h[?25l[A}[?12l[?25h[?25l[?12l[?25h[?25l[A  }[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[28;4H[?12l[?25h[?25l[29d[?12l[?25h[?25l[30d[?12l[?25h[?25l[31d s[?12l[?25h[?25l[32d[?12l[?25h[?25l[33d[?12l[?25h[?25l[A}[?12l[?25h[?25l[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[53;44H(B[0;7m[ Unbound key ](B[m[43d[?12l[?25h[?25l[54;15H(B[0;7mM-C(B[m Case Sens (B[0;7mM-B(B[m Backwards (B[0;7mM-J(B[m FullJstify(B[0;7m^W(B[m Beg of Par (B[0;7m^Y(B[m First Line (B[0;7m^P(B[m PrevHstory[55;2H(B[0;7mC(B[m Cancel     (B[0;7mM-R(B[m Regexp    (B[0;7m^R[55;44HT(B[m Go To Line (B[0;7m^O(B[m End of Par (B[0;7m^V(B[m Last Line  (B[0;7m^N(B[m NextHstory[53d(B[0;7mSearch:                                                                                              [53;1H(B[m[53;9H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[53;44H[1K (B[0;7m[ Cancelled ](B[m[K[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[K[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\[55;44HU(B[m Uncut Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[K[53d[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[25d[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l}[?12l[?25h[?25l[1;92H(B[0;7mModified[53d(B[m[K[1;100H[26;53r[26;1HM[1;55r[26;1H[?12l[?25h[?25l[8G[42m[1K [49m(B[m[?12l[?25h[?25l[1K =[?12l[?25h[?25l[42m[1K [49m(B[m [?12l[?25h[?25l[K[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l  o[?12l[?25h[?25lu[?12l[?25h[?25lt[?12l[?25h[?25l[[?12l[?25h[?25ln[?12l[?25h[?25l][?12l[?25h[?25l [?12l[?25h[?25l][?12l[?25h[?25l=[?12l[?25h[?25l'[?12l[?25h[?25l\[?12l[?25h[?25l0[?12l[?25h[?25l7[27;53r8[27dM[1;55r[27;1H[?12l[?25h[?25l[27;53r[53;1H
+[1;55r[26;13H[?12l[?25h[?25l(B[0;1m[35m'\0'[39m(B[m[?12l[?25h[?25l;[?12l[?25h[?25l[1;100H[1;92H(B[0;7m        (B[m[53;42H(B[0;7m[ Wrote 49 lines ](B[m[26;15H[?12l[?25h[?25l[53d[J[55;101H[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ nano hello.cc ./hello 'bart simp' 'llisa simp'[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ make[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ makenano hello.cc ./hello 'bart simp' 'llisa simp'
+Hello Bart Simp
+Hello Lisa Simp
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ./hello 'bart simp' 'llisa simp'[Cs'o'n'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs' '[1@l[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co' [1@'[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn'[1@ 
+Hello Bart Simpson
+Hello Lisa Simpson
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ls -a ../../
+[0m[01;34m.[0m  [01;34m..[0m  [01;34mexercises[0m  [01;34mlab2[0m  lab2.html  lab2.log  lab2.pdf  lab2.umt
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ ls -l ../../
+total 172
+drwxr-xr-x 5 rutvik rutvik  4096 Feb  5 15:28 [0m[01;34mexercises[0m
+drwxr-xr-x 2 rutvik rutvik  4096 Feb  5 15:28 [01;34mlab2[0m
+-rw-r--r-- 1 rutvik rutvik 24095 Feb  5 15:28 lab2.html
+-rw-r--r-- 1 rutvik rutvik 28672 Feb  5 23:06 lab2.log
+-rw-r--r-- 1 rutvik rutvik 93531 Feb  5 15:28 lab2.pdf
+-rw-r--r-- 1 rutvik rutvik 13909 Feb  5 15:28 lab2.umt
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/2-hello[00m$ cd ..
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises[00m$ cd ..
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2[00m$ cd exercises/3-overload/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[00m$ ls
+Makefile  overload.cc
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[00m$ make
+g++ -g -Wall -std=c++17    overload.cc   -o overload
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[00m$ ./overload 
+f(a) = 3; f(&a) = 4; f(a, b) = -1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[00m$ gdb o
+oakdecode        oclock           open             orca             ownership
+obexctl          od               openssl          orca-dm-wrapper  
+objcopy          odo              openvt           os-prober        
+objdump          on_ac_power      opldecode        overload         
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[00m$ gdb overload 
+GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from overload...done.
+(gdb) b f(int
+f(int)       f(int*)      f(int, int)  
+(gdb) b f(int8[K*) 
+Breakpoint 1 at 0x982: file overload.cc, line 3.
+(gdb) r
+Starting program: /home/rutvik/Desktop/cs240/i240b/work/lab2/exercises/3-overload/overload 
+
+Breakpoint 1, f (a=0x7fffffffde90) at overload.cc:3
+3	int f(int *a) { return *a * 2; }
+(gdb) p a
+$1 = (int *) 0x7fffffffde90
+(gdb) p a*a
+$2 = 2
+(gdb) p a[K*a=5
+$3 = 5
+(gdb) n
+main () at overload.cc:15
+15	    << std::endl;
+(gdb) n
+f(a) = 3; f(&a) = 10; f(a, b) = 2
+16	}
+(gdb) n
+__libc_start_main (main=0x5555555549ad <main()>, argc=1, argv=0x7fffffffdf98, init=<optimized out>, 
+    fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffdf88)
+    at ../csu/libc-start.c:344
+344	../csu/libc-start.c: No such file or directory.
+(gdb) 
+[Inferior 1 (process 10917) exited normally]
+(gdb) 
+The program is not being run.
+(gdb) q
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab2/exercises/3-overload[00m$ cdm[K ../../../
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work[00m$ git mv lab2/ ../submit/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work[00m$ ls
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs2
