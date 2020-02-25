@@ -32,7 +32,8 @@ int main(int argc, char **argv){
     int minSize = 0;
     int numWords = 0;
     if(argc<4){ 
-      std::cout<<"Insufficient arguments provided";
+      std::cout<<"Insufficient arguments provided"<<std::endl;
+      exit(0);
     }
     std::map<std::string, int> wordMap;
     if(ifNumberAssign(argv[1], numWords));
@@ -43,6 +44,7 @@ int main(int argc, char **argv){
     else printError(argv[3], "MAX_WORD_LEN");
     if(maxSize<minSize){
       std::cout<<"MIN_WORD_LENGTH "<<minSize<<" is greater than MAX_WORD_LENGTH "<<maxSize<<std::endl;
+      exit(0);
     }
     
     for(int i=4; i<argc; i++){
