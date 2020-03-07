@@ -68,4 +68,137 @@ rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ 
 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd 1-point/evince ../lab4.pdf  &[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias evince='evince 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cevince ../lab4.pdf [K &[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcd 1-point/
 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmake -f ../Makefile [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -lal./main gedit point.cc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias gedit 'gedit 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias gedit 'gedit 2>/dev/null'[1P2>/dev/null'[C[C[C[C 2>/dev/null'[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'ged[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+'ge[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'ged[1P[A[C[C[C[C[C[C[C[C
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias gedit 'gedit 2>/dev/null'[1P2>/dev/null'[C[C[C[C 2>/dev/null'[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'ged[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+'ge[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'ged[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C='ge[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ gedit [K[K[K[K[K[Kls\[K
+main  main.cc  main.o  point.cc  point.hh  point.o
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ gedit poui[K[Kint.cc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kc
+^C
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ g [K[Kcd ..
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ cd ..
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4$ cd ..
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work$ git add .
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work$ git commiy[Kt
+hint: Waiting for your editor to close the file... [?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"~/i240b/.git/COMMIT_EDITMSG" 35L, 1327C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[34m# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# [m[35mCommitter:[m[34m Rutvik Saptarshi <rsaptar2@cs.binghamton.edu>
+#
+# On branch [m[35mmaster[m
+[34m# Your branch is up to date with '[m[35morigin/master[m[34m'.
+#
+# [m[35mChanges to be committed:[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/1-point/.gitignore[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/1-point/main.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/1-point/point.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/1-point/point.hh[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/2-shape/main.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/2-shape/point.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/2-shape/point.hh[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/2-shape/shapes.hh[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/2-shape/tostring.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/2-shape/tostring.hh[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/3-expr/expr.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/3-expr/expr.hh[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/3-expr/main.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/3-expr/parse.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/3-expr/parse.hh[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/3-expr/tostring.cc[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/3-expr/tostring.hh[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/Makefile[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/exercises/lab4.log[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/lab4.html[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/lab4.pdf[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/lab4.umt[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/lab4/hl-fine_blue.css[m
+[34m#       [m[32mnew file[m[34m: [m[31m  lab4/lab4/hl-fine_blue.sty[m
+[34m#[m
+[94m~                                                                                             [37;1H~                                                                                             [38;1H~                                                                                             [39;1H~                                                                                             [40;1H~                                                                                             [41;1H~                                                                                             [42;1H~                                                                                             [43;1H~                                                                                             [44;1H~                                                                                             [45;1H~                                                                                             [46;1H~                                                                                             [47;1H~                                                                                             [48;1H~                                                                                             [m[49;77H1,0-1[9CAll]2;COMMIT_EDITMSG (~/i240b/.git) - VIM]1;COMMIT_EDITMSG[1;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?1000l[?1006h[?1002h[?1006l[?1002l[?1006h[?1002h[27m[23m[29m[m[H[2J[?25l[2;1H[96m# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# [m[38;5;81mCommitter:[m[96m Rutvik Saptarshi <rsaptar2@cs.binghamton.edu>
+#
+# On branch [m[38;5;224mmaster[m
+[96m# Your branch is up to date with '[m[38;5;224morigin/master[m[96m'.
+#
+# [m[38;5;81mChanges to be committed:[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/1-point/.gitignore[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/1-point/main.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/1-point/point.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/1-point/point.hh[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/2-shape/main.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/2-shape/point.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/2-shape/point.hh[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/2-shape/shapes.hh[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/2-shape/tostring.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/2-shape/tostring.hh[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/3-expr/expr.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/3-expr/expr.hh[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/3-expr/main.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/3-expr/parse.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/3-expr/parse.hh[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/3-expr/tostring.cc[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/3-expr/tostring.hh[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/Makefile[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/exercises/lab4.log[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/lab4.html[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/lab4.pdf[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/lab4.umt[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/lab4/hl-fine_blue.css[m
+[96m#       [m[38;5;121mnew file[m[96m: [m[95m  lab4/lab4/hl-fine_blue.sty[m
+[96m#[m
+[94m~                                                                                             [37;1H~                                                                                             [38;1H~                                                                                             [39;1H~                                                                                             [40;1H~                                                                                             [41;1H~                                                                                             [42;1H~                                                                                             [43;1H~                                                                                             [44;1H~                                                                                             [45;1H~                                                                                             [46;1H~                                                                                             [47;1H~                                                                                             [48;1H~                                                                                             [m[49;77H1,0-1[9CAll"~/i240b/.git/COMMIT_EDITMSG" 35L, 1327C[1;1H[?25h[?25l[49;67Hd[1;1H[?25h[?25l[49;68Ho[1;1H[49;1H[97m[41mE99: Current buffer is not in diff mode[m[49;40H[K[1;1H[49;77H1,0-1[9CAll[1;1H[?25h[?25l[49;67Hn[1;1H[49;1H/sad[49;5H[K[49;1H[38;5;224msearch hit BOTTOM, continuing at TOP[m[97m[41mE486: Pattern not found: sad[m[49;29H[K[1;1H[49;77H1,0-1[9CAll[1;1H[?25h[?25l[49;67He[1;1H[49;67H [2;1H[49;77H2,1  [2;1H[?25h[?25l[49;67Hi[2;1H[49;67H [2;1H[49;1H[1m-- INSERT --[m[49;13H[K[49;77H2,1[11CAll[2;1H[?25h[?25ld# Please enter the commit message for your changes. Lines starting[49;79H2]2;COMMIT_EDITMSG + (~/i240b/.git) - VIM]1;COMMIT_EDITMSG[2;2H[?25h[?25lo# Please enter the commit message for your changes. Lines starting[49;79H3[2;3H[?25h[?25ln# Please enter the commit message for your changes. Lines starting[49;79H4[2;4H[?25h[?25le# Please enter the commit message for your changes. Lines starting[49;79H5[2;5H[?25h[?25l # Please enter the commit message for your changes. Lines starting[49;79H6[2;6H[?25h[?25l# Please enter the commit message for your changes. Lines starting[2;71H[K[49;79H5[2;5H[?25h[?25l[3;48r[3;1H[L[1;49r[2;5H[K[3;1H[96m# Please enter the commit message for your changes. Lines starting[m[49;77H[K[49;77H3,1[11CAll[3;1H[?25h[?25l[49;77H2[2;1H[?25h[?25l[49;79H5[2;5H[?25h[?25l[49;79H1[2;1H[?25h[?25lone[2;4H[K[2;1H[?25h[?25lne[2;3H[K[2;1H[?25h[?25le[2;2H[K[2;1H[?25h[?25l[2;1H[K[2;1H[?25h[?25la[49;79H2[2;2H[?25h[?25ld[49;79H3[2;3H[?25h[?25ld[49;79H4[2;4H[?25h[?25le[49;79H5[2;5H[?25h[?25ld[49;79H6[2;6H[?25h[?25l[49;79H7[2;7H[?25h[?25ll[49;79H8[2;8H[?25h[?25la[49;79H9[2;9H[?25h[?25lb[49;79H10[2;10H[?25h[?25l4[49;80H1[2;11H[?25h[?25l3[49;80H2[2;12H[?25h[?25l[2;11H[K[49;80H1[2;11H[?25h[49;1H[K[2;10H[?25l[49;67H^[[2;10H[49;67H  [2;11H[49;77H2,10[10CAll[2;10H[?25h[?25l[49;67H:[2;10H[49;67H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1006l[?1002l[?2004l".git/COMMIT_EDITMSG" 36L, 1338C written]2;Terminal - ]1;Terminal - [23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0t[K[master 88ac591] added lab4
+ Committer: Rutvik Saptarshi <rsaptar2@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 24 files changed, 1366 insertions(+)
+ create mode 100644 work/lab4/exercises/1-point/.gitignore
+ create mode 100644 work/lab4/exercises/1-point/main.cc
+ create mode 100644 work/lab4/exercises/1-point/point.cc
+ create mode 100644 work/lab4/exercises/1-point/point.hh
+ create mode 100644 work/lab4/exercises/2-shape/main.cc
+ create mode 100644 work/lab4/exercises/2-shape/point.cc
+ create mode 100644 work/lab4/exercises/2-shape/point.hh
+ create mode 100644 work/lab4/exercises/2-shape/shapes.hh
+ create mode 100644 work/lab4/exercises/2-shape/tostring.cc
+ create mode 100644 work/lab4/exercises/2-shape/tostring.hh
+ create mode 100644 work/lab4/exercises/3-expr/expr.cc
+ create mode 100644 work/lab4/exercises/3-expr/expr.hh
+ create mode 100644 work/lab4/exercises/3-expr/main.cc
+ create mode 100644 work/lab4/exercises/3-expr/parse.cc
+ create mode 100644 work/lab4/exercises/3-expr/parse.hh
+ create mode 100644 work/lab4/exercises/3-expr/tostring.cc
+ create mode 100644 work/lab4/exercises/3-expr/tostring.hh
+ create mode 100644 work/lab4/exercises/Makefile
+ create mode 100644 work/lab4/exercises/lab4.log
+ create mode 100644 work/lab4/lab4.html
+ create mode 100644 work/lab4/lab4.pdf
+ create mode 100644 work/lab4/lab4.umt
+ create mode 100644 work/lab4/lab4/hl-fine_blue.css
+ create mode 100644 work/lab4/lab4/hl-fine_blue.sty
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work$ git commiyt[K[K[K[K[K[K[Kpusg[Kj[Kh
+Username for 'https://github.com': rsaptar2
+Password for 'https://rsaptar2@github.com': 
+Enumerating objects: 31, done.
+Counting objects:   3% (1/31)   Counting objects:   6% (2/31)   Counting objects:   9% (3/31)   Counting objects:  12% (4/31)   Counting objects:  16% (5/31)   Counting objects:  19% (6/31)   Counting objects:  22% (7/31)   Counting objects:  25% (8/31)   Counting objects:  29% (9/31)   Counting objects:  32% (10/31)   Counting objects:  35% (11/31)   Counting objects:  38% (12/31)   Counting objects:  41% (13/31)   Counting objects:  45% (14/31)   Counting objects:  48% (15/31)   Counting objects:  51% (16/31)   Counting objects:  54% (17/31)   Counting objects:  58% (18/31)   Counting objects:  61% (19/31)   Counting objects:  64% (20/31)   Counting objects:  67% (21/31)   Counting objects:  70% (22/31)   Counting objects:  74% (23/31)   Counting objects:  77% (24/31)   Counting objects:  80% (25/31)   Counting objects:  83% (26/31)   Counting objects:  87% (27/31)   Counting objects:  90% (28/31)   Counting objects:  93% (29/31)   Counting objects:  96% (30/31)   Counting objects: 100% (31/31)   Counting objects: 100% (31/31), done.
+Delta compression using up to 8 threads
+Compressing objects:   3% (1/28)   Compressing objects:   7% (2/28)   Compressing objects:  10% (3/28)   Compressing objects:  14% (4/28)   Compressing objects:  17% (5/28)   Compressing objects:  21% (6/28)   Compressing objects:  25% (7/28)   Compressing objects:  28% (8/28)   Compressing objects:  32% (9/28)   Compressing objects:  35% (10/28)   Compressing objects:  39% (11/28)   Compressing objects:  42% (12/28)   Compressing objects:  46% (13/28)   Compressing objects:  50% (14/28)   Compressing objects:  53% (15/28)   Compressing objects:  57% (16/28)   Compressing objects:  60% (17/28)   Compressing objects:  64% (18/28)   Compressing objects:  67% (19/28)   Compressing objects:  71% (20/28)   Compressing objects:  75% (21/28)   Compressing objects:  78% (22/28)   Compressing objects:  82% (23/28)   Compressing objects:  85% (24/28)   Compressing objects:  89% (25/28)   Compressing objects:  92% (26/28)   Compressing objects:  96% (27/28)   Compressing objects: 100% (28/28)   Compressing objects: 100% (28/28), done.
+Writing objects:   3% (1/29)   Writing objects:   6% (2/29)   Writing objects:  10% (3/29)   Writing objects:  13% (4/29)   Writing objects:  17% (5/29)   Writing objects:  20% (6/29)   Writing objects:  24% (7/29)   Writing objects:  27% (8/29)   Writing objects:  31% (9/29)   Writing objects:  34% (10/29)   Writing objects:  37% (11/29)   Writing objects:  41% (12/29)   Writing objects:  44% (13/29)   Writing objects:  48% (14/29)   Writing objects:  51% (15/29)   Writing objects:  55% (16/29)   Writing objects:  58% (17/29)   Writing objects:  62% (18/29)   Writing objects:  65% (19/29)   Writing objects:  68% (20/29)   Writing objects:  72% (21/29)   Writing objects:  75% (22/29)   Writing objects:  79% (23/29)   Writing objects:  82% (24/29)   Writing objects:  86% (25/29)   Writing objects:  89% (26/29)   Writing objects:  93% (27/29)   Writing objects:  96% (28/29)   Writing objects: 100% (29/29)   Writing objects: 100% (29/29), 79.23 KiB | 6.60 MiB/s, done.
+Total 29 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 1 local object.[K
+To https://github.com/rsaptar2/i240b
+   60565a9..88ac591  master -> master
+rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work$ exit
+
+Script done on 2020-02-20 12:57:44-05:00 [COMMAND_EXIT_CODE="0"]
