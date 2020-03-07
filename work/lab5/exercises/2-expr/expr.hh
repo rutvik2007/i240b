@@ -8,6 +8,8 @@
 
 
 class Expr : public ToString {
+public:
+  virtual int eval() const = 0;
 };
 
 //ExprPtr is an alias for a smart shared ptr to an Expr.
@@ -32,6 +34,8 @@ public:
   //use Private to ensure this constructor cannot be called from outside
   //this class even though it is public
   IntExpr(int val, Private x) : value(val) { }
+
+  int eval() const { return value; }
 
 }; //IntExpr
 
@@ -58,6 +62,9 @@ public:
   AddExpr(ExprPtr& left, ExprPtr& right, Private x) :
     left(left), right(right) {
   }
+
+  int eval() const { return left->eval() + right->eval(); }
+  
 }; //AddExpr
 
 
@@ -80,6 +87,9 @@ public:
   SubExpr(ExprPtr& left, ExprPtr& right, Private x) :
     left(left), right(right) {
   }
+
+  int eval() const { return left->eval() - right->eval(); }
+  
 }; //SubExpr
 
 
@@ -102,6 +112,9 @@ public:
   MulExpr(ExprPtr& left, ExprPtr& right, Private x) :
     left(left), right(right) {
   }
+
+  int eval() const { return left->eval() * right->eval(); }
+  
 }; //MulExpr
 
 class DivExpr : public Expr {
@@ -123,6 +136,9 @@ public:
   DivExpr(ExprPtr& left, ExprPtr& right, Private x) :
     left(left), right(right) {
   }
+
+  int eval() const { return left->eval() / right->eval(); }
+
 }; //DivExpr
 
 

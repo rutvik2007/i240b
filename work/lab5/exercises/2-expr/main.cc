@@ -12,6 +12,7 @@ main(int argc, char* argv[])
     std::exit(1);
   }
   for (auto i = 1; i < argc; i++) {
-    std::cout << *parse(argv[i]) << std::endl;
+    ExprPtr exprP = parse(argv[i]);
+    std::cout << *exprP << " = " << exprP->eval() << std::endl;
   }
 }
