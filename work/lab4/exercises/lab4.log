@@ -1,71 +1,64 @@
-Script started on 2020-02-20 12:40:26-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
-bash: /home/umrigar/cs240/bin/student.rc: Permission denied
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ ls
-1-point  2-shape  3-expr  lab4.log  Makefile
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ [Krsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ [Krsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ [Krsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ [Krsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ [Krsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ ^C
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ ^C
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ ^C
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ alias evince='evince 2>/dev/null'[C
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ evince lab4.log [K[K[K[K[K[K[K[K[K../lab4.pdf 
+Script started on 2020-02-20 18:14:23-0500
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises[00m$ gedit li ne.hh[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat lab4.log [K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[Kcd e[K1-poinnt/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$  gedit line.cc[K[Khh
 ^C
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ !! &
-evince ../lab4.pdf  &
-[1] 20075
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises$ cd 1-point/
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ ls
-main.cc  point.cc  point.hh
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ ls [K[K[Kmake -f ../Makefile 
-g++ -MT point.o -MMD -MP -MF .deps/point.d -g -Wall -std=c++17 -c point.cc
-g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
-g++ point.o main.o -o main
-cat </dev/null >.gitignore
-echo .deps >.gitignore
-for t in main point.o main.o; do echo $t >>.gitignore; done
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ ./
-.deps/ main   
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ ./[K[Kls
-main  main.cc  main.o  point.cc  point.hh  point.o
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ ./main [K[K[K[K[K[K[Kls -l
-total 592
--rwxr-xr-x 1 rsaptar2 rsaptar2 189544 Feb 20 12:45 main
--rw-r--r-- 1 rsaptar2 rsaptar2   1174 Feb 20 12:38 main.cc
--rw-r--r-- 1 rsaptar2 rsaptar2 206504 Feb 20 12:45 main.o
--rw-r--r-- 1 rsaptar2 rsaptar2    533 Feb 20 12:38 point.cc
--rw-r--r-- 1 rsaptar2 rsaptar2    654 Feb 20 12:38 point.hh
--rw-r--r-- 1 rsaptar2 rsaptar2 190640 Feb 20 12:45 point.o
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ ./[K[Kls -l[C[Kal
-total 596
-drwxr-xr-x 3 rsaptar2 rsaptar2    153 Feb 20 12:45 .
-drwxr-xr-x 5 rsaptar2 rsaptar2    101 Feb 20 12:40 ..
-drwxr-xr-x 2 rsaptar2 rsaptar2     45 Feb 20 12:45 .deps
--rw-r--r-- 1 rsaptar2 rsaptar2     26 Feb 20 12:45 .gitignore
--rwxr-xr-x 1 rsaptar2 rsaptar2 189544 Feb 20 12:45 main
--rw-r--r-- 1 rsaptar2 rsaptar2   1174 Feb 20 12:38 main.cc
--rw-r--r-- 1 rsaptar2 rsaptar2 206504 Feb 20 12:45 main.o
--rw-r--r-- 1 rsaptar2 rsaptar2    533 Feb 20 12:38 point.cc
--rw-r--r-- 1 rsaptar2 rsaptar2    654 Feb 20 12:38 point.hh
--rw-r--r-- 1 rsaptar2 rsaptar2 190640 Feb 20 12:45 point.o
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ ./main 
-distance from (0, 0) to (3, 4) is 5
-distance from (0, 0) to (1, 1) is 1.41421
-distance from (0, 0) to (4, 5) is 6.40312
-distance from (3, 4) to (1, 1) is 3.60555
-distance from (3, 4) to (4, 5) is 1.41421
-distance from (1, 1) to (4, 5) is 5
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$  !! &
+gedit line.hh &
+[1] 9520
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$  cat line .[K[K[K[K[K[Kpi[Koint..[Kcc
+#include "point.hh"
 
-sizeof(double) = 8
-sizeof(Point) = 16
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ gedit point.cc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kc
-^C
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ gedit point.cc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7P./main 
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pls -al[1Pl[Kmake -f ../Makefile [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd 1-point/evince ../lab4.pdf  &[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias evince='evince 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cevince ../lab4.pdf [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias evince='evince 2>/dev/null'[C[1P 2>/dev/null'[C[C[C[C[C[1P 2>/dev/null'[C[C[C[C[1P 2>/dev/null'[C[C[C[1P 2>/dev/null'[C[C[1P 2>/dev/null'[C[1P 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2[1P>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>[1P/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/[1Pdev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/d[1Pev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/de[1Pv/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/dev[1P/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/dev/[1Pnull'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/dev/n[1Pull'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/dev/n[1Pull'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce 2>/dev/null'd 2>/dev/null'[Ci 2>/dev/null'[C[Ct 2>/dev/null'[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'ge[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-bash: alias: gedit: not found
-bash: alias: gedit 2>/dev/null: not found
-rsaptar2@q22-23:/import/linux/home1/rsaptar2/i240b/work/lab4/exercises/1-point$ alias gedit 'gedit 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgedit point.cc [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7P./main 
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pls -al[1Pl[Kmake -f ../Makefile [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd 1-point/evince ../lab4.pdf  &[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias evince='evince 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cevince ../lab4.pdf [K &[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcd 1-point/
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmake -f ../Makefile [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -lal./main gedit point.cc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias gedit 'gedit 2>/dev/null'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calias gedit 'gedit 2>/dev/null'[1P2>/dev/null'[C[C[C[C 2>/dev/null'[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'ged[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+'ge[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'ged[1P[A[C[C[C[C[C[C[C[C
+#include <cmath>
+#include <string>
+#include <sstream>
+
+/** return distance of this point from other point */
+double Point::distance(const Point& other) const {
+  const auto dx = x - other.x;
+  const auto dy = y - other.y;
+  return sqrt(dx*dx + dy*dy);
+}
+
+std::string Point::toString() const {
+  //declaring s to be a stringstream allows usage similar to std::cout
+  std::stringstream s;
+  s << "(" << x << ", " << y << ")"; //normal (x, y) format
+  return s.str(); //return std::string underlying stringstream
+}
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$  cat point.cc[K[Khh
+#ifndef POINT_HH_
+#define POINT_HH_
+
+#include <string>
+
+struct Point {
+  //for the purpose of this lab, these fields are public but const.
+  //Having them public makes it hard to change the reprentation
+  //from these cartesian coordinates to polar coordinates.
+  const double x, y;
+
+  /** constructor */
+  Point(double x=0, double y=0) : x(x), y(y) { }
+
+  /** return distance of this point from other point */
+  //the trailing const means that this function will not change
+  //this point
+  double distance(const Point& other) const;
+
+  /** return a string representation of this point */
+  std::string toString() const;
+};
+
+
+
+#endif //ifndef POINT_HH_
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$  cat point.hh[K[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ cat point.hh[K[K[K[K[K[K[K[K[K[K[K[Kcd .[K[K[K[Kls
+line.hh  main.cc  point.cc  point.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ cd ..
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises[00m$ cd 2-shape/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ ls
+main.cc  point.cc  point.hh  shapes.hh  tostring.cc  tostring.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ exit
+
+Script done on 2020-02-20 18:37:45-0500
