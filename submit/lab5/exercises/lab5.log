@@ -1,0 +1,611 @@
+Script started on 2020-03-07 19:30:44-0500
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises[00m$ catv^[[2~[K[K[K[K[K ../../../submit/lab4/exercisess/lab4.log \
+> ^C
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises[00m$ cat ../../../submit/lab4/exercisess/lab4.log \[K[K
+Script started on 2020-03-07 18:42:25-0500
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises[00m$ cd 1-point/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ code *.hh *.cc
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ make -f ../Makefi;e[K[Kle 
+make: Nothing to be done for 'all'.
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ make clean
+make: *** No rule to make target 'clean'.  Stop.
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ make clean-f ../Makefile [10Pclean[Kmake clean-f ../Makefile [10Pclean[K./amain[K[K[K[Km[K[Kmain
+Line 0(0, 0) -- (3, 4)Length: 5
+Line 2(1, 1) -- (4, 5)Length: 5
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ cd ../2-shape/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ code *.hh &[K&[K*>cc[K[K.[K[K.cc
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ make -f ../Makefile
+make: Nothing to be done for 'all'.
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ ./main
+Circle[(0, 0), 1] perimeter: 6.28319 area: 3.14159
+Rectangle[(1, 1), (4, 5)] perimeter: 14 area: 12
+Circle[(1, 1), 2] perimeter: 12.5664 area: 12.5664
+Rectangle[(0, 0), (5, 4)] perimeter: 18 area: 20
+
+sizeof(double) = 8
+sizeof(Point) = 24
+
+sizeof(ToString) = 8
+sizeof(Shape) = 8
+sizeof(Circle) = 40
+sizeof(Rectangle) = 56
+
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ cd ..?[K/3-expr/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ code *.cc *.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ code *.cc *.hh[1Pd ../3-expr/[7P./maincd ../3-expr/[7P./mainmake -f ../Makefile[5Pcode *.hh *.ccd ../2-shape/[8P./maincd ../2-shape/ode *.hh *.ccmake -f ../Makefile./main[Kcd ../3-expr/ode *.cc *.hh[Kcode *.cc *.hh[1Pd ../3-expr/[7P./mainmake -f ../Makefile[5Pcode *.hh *.ccd ../2-shape/ode *.hh *.ccd ../2-shape/[8P./mainmake clean[4P./mainmake clean-f ../Makefile 
+g++ -MT tostring.o -MMD -MP -MF .deps/tostring.d -g -Wall -std=c++17 -c tostring.cc
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ -MT parse.o -MMD -MP -MF .deps/parse.d -g -Wall -std=c++17 -c parse.cc
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+[01m[Kexpr.cc:46:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint IntExpr::eval()[m[K’ does not match any in class ‘[01m[KIntExpr[m[K’
+ int [01;31m[KIntExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:24:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int IntExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:50:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint AddExpr::eval()[m[K’ does not match any in class ‘[01m[KAddExpr[m[K’
+ int [01;31m[KAddExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:51:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int AddExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:53:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint DivExpr::eval()[m[K’ does not match any in class ‘[01m[KDivExpr[m[K’
+ int [01;31m[KDivExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:116:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int DivExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:56:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint MulExpr::eval()[m[K’ does not match any in class ‘[01m[KMulExpr[m[K’
+ int [01;31m[KMulExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:95:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int MulExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:59:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint SubExpr::eval()[m[K’ does not match any in class ‘[01m[KSubExpr[m[K’
+ int [01;31m[KSubExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:78:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int SubExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+../Makefile:48: recipe for target 'expr.o' failed
+make: *** [expr.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile 
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int AddExpr::eval() const[m[K’:
+[01m[Kexpr.cc:51:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->right->eval([01;31m[K)[m[K + this->left->eval();
+                            [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:51:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->right->eval() + this->left->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int DivExpr::eval() const[m[K’:
+[01m[Kexpr.cc:54:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval([01;31m[K)[m[K / this->right->eval();
+                           [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:54:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval() / this->right->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int MulExpr::eval() const[m[K’:
+[01m[Kexpr.cc:57:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval([01;31m[K)[m[K * this->right->eval();
+                           [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:57:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval() * this->right->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int SubExpr::eval() const[m[K’:
+[01m[Kexpr.cc:60:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval([01;31m[K)[m[K - this->right->eval();
+                           [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:60:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval() - this->right->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+../Makefile:48: recipe for target 'expr.o' failed
+make: *** [expr.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ -MT parse.o -MMD -MP -MF .deps/parse.d -g -Wall -std=c++17 -c parse.cc
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2"
+(1) + (2)
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2"make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+[01m[Kmain.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kmain.cc:15:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing ExprPtr = class std::shared_ptr<Expr> {aka class std::shared_ptr<Expr>}[m[K’ has no member named ‘[01m[Keval[m[K’
+     std::cout << *parse(argv[i]) << *parse(argv[i]).[01;31m[Keval[m[K() << std::endl;
+                                                     [01;31m[K^~~~[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./,m[K[K[K[Kmake -f ../Makefile [6P./main "+ 1 2"make -f ../Makefile [6Pcode *.cc *.hh[1Pd ../3-expr/ode *.cc *.hhmake -f ../Makefile [6P./main "+ 1 2"
+(1) + (2)3
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2"make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile [6P./main "+ 1 2"
+(1) + (2) = 3
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2" "- 3 4" "* 55 6" "/ 77 8"
+(1) + (2) = 3
+(3) - (4) = -1
+(5) * (6) = 30
+(77) / (8) = 9
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ exit
+
+Script done on 2020-03-07 19:15:28-0500
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises[00m$ cd 21[K1[K1[K[K1-animal/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ lsm ..[K[K[K[K ..]
+ls: cannot access '..]': No such file or directory
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ 
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ 
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ ls ..][K
+[0m[01;34m1-animal[0m  [01;34m2-expr[0m  lab5.log  Makefile
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ make ,,.[K[K[K-f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+[01m[Kmain.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kmain.cc:10:24:[m[K [01;31m[Kerror: [m[Kinvalid abstract type ‘[01m[KAnimal[m[K’ for ‘[01m[Kanimals[m[K’
+   const Animal animals[[01;31m[K][m[K = { fido, fluffy };
+                        [01;31m[K^[m[K
+In file included from [01m[Kmain.cc:1:0[m[K:
+[01m[Kanimal.hh:3:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[KAnimal[m[K’:
+ class [01;36m[KAnimal[m[K {
+       [01;36m[K^~~~~~[m[K
+[01m[Kanimal.hh:8:23:[m[K [01;36m[Knote: [m[K	virtual std::__cxx11::string Animal::says() const
+   virtual std::string [01;36m[Ksays[m[K()  const = 0;
+                       [01;36m[K^~~~[m[K
+[01m[Kmain.cc:10:43:[m[K [01;31m[Kerror: [m[Kcannot allocate an object of abstract type ‘[01m[KAnimal[m[K’
+   const Animal animals[] = { fido, fluffy [01;31m[K}[m[K;
+                                           [01;31m[K^[m[K
+[01m[Kmain.cc:10:43:[m[K [01;31m[Kerror: [m[Kcannot allocate an object of abstract type ‘[01m[KAnimal[m[K’
+[01m[Kmain.cc:11:25:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kconst Animal* animals [][m[K’
+   const Animal *animals[[01;31m[K][m[K = {
+                         [01;31m[K^[m[K
+[01m[Kmain.cc:10:16:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kconst Animal animals [2][m[K’
+   const Animal [01;36m[Kanimals[m[K[] = { fido, fluffy };
+                [01;36m[K^~~~~~~[m[K
+[01m[Kmain.cc:19:23:[m[K [01;31m[Kerror: [m[Kcannot allocate an object of abstract type ‘[01m[KAnimal[m[K’
+   for (auto animalP : [01;31m[Kanimals[m[K) {
+                       [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cc:19:13:[m[K [01;31m[Kerror: [m[Kcannot declare variable ‘[01m[KanimalP[m[K’ to be of abstract type ‘[01m[KAnimal[m[K’
+   for (auto [01;31m[KanimalP[m[K : animals) {
+             [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cc:20:19:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[KAnimal[m[K’
+     out << animalP[01;31m[K->[m[Kname << " says " << animalP->says() << std::endl;
+                   [01;31m[K^~[m[K
+[01m[Kmain.cc:20:48:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[KAnimal[m[K’
+     out << animalP->name << " says " << animalP[01;31m[K->[m[Ksays() << std::endl;
+                                                [01;31m[K^~[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ coide[K[K[K[Kode *,[K.cc *.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ code *.cc *.hhmake -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ ./main
+bessie says moo
+bossy says moo
+fido says woof
+fluffy says meow
+rufus says woof
+simba says meow
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ ./mainmake -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:1:0[m[K:
+[01m[Kanimal.hh:9:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   virtual [01;31m[Kstd[m[K:string eats() const = 0;
+           [01;31m[K^~~[m[K
+           [32m[Kstdin[m[K
+[01m[Kanimal.hh:22:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   [01;31m[Kstd[m[K:string eats() const{
+   [01;31m[K^~~[m[K
+   [32m[Kstdin[m[K
+[01m[Kanimal.hh:34:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   [01;31m[Kstd[m[K:string eats() const{
+   [01;31m[K^~~[m[K
+   [32m[Kstdin[m[K
+[01m[Kanimal.hh:47:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   [01;31m[Kstd[m[K:string eats() const{
+   [01;31m[K^~~[m[K
+   [32m[Kstdin[m[K
+[01m[Kmain.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kmain.cc:20:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class Animal[m[K’ has no member named ‘[01m[Keats[m[K’; did you mean ‘[01m[Ksays[m[K’?
+     out << animalP->name << " says " << animalP->[01;31m[Keats[m[K() << std::endl;
+                                                  [01;31m[K^~~~[m[K
+                                                  [32m[Ksays[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ ./main
+bessie says Grass
+bossy says Grass
+fido says Dog food
+fluffy says Cat food
+rufus says Dog food
+simba says Cat food
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/1-animal[00m$ cd ../2-expr/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ ls
+expr.cc  expr.hh  main.cc  parse.cc  parse.hh  tostring.cc  tostring.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ cpod[K[K[K[Kcode *.cc *.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ *.cc *[K[K[K[K[K[Kgrep dc *.cc *.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$  [Kcart[K[Kt ![K~/Desktop/cs24`[K`=[K[K0/i240b/ submit/lab4/exercises/1-point/*[K*.cc *.hh[C[C
+#include "line.hh"
+#include <cmath>
+#include <string>
+#include <sstream>
+
+double Line::length() const {
+    return p1.distance(p2);
+}
+
+std::string Line::toString() const {
+    return p1.toString() + " -- " +p2.toString();
+}#include "point.hh"
+#include "line.hh"
+#include <iostream>
+
+//declare an array of points
+static const Point points[] = {
+  Point(0, 0), Point(3, 4), Point(1, 1), Point(4, 5),
+};
+//use standard idiom to figure out number of elements in array
+static constexpr auto nPoints = sizeof(points)/sizeof(points[0]);
+
+static void
+outSizes(std::ostream& out) {
+  out << "sizeof(double) = " << sizeof(double) << std::endl;
+  out << "sizeof(Point) = " << sizeof(Point) << std::endl;
+}
+
+/** output pair-wise distance between all points in points[] to out. */
+static void
+outDistances(std::ostream& out)
+{
+  for (auto i = 0u; i < nPoints - 1; i++) {
+    Point pi = points[i];
+    for (auto j = i + 1; j < nPoints; j++) {
+      Point pj = points[j];
+      out << "distance from " << pi.toString()
+	  << " to " << pj.toString()
+	  << " is " << pi.distance(pj)
+	  << std::endl;
+    }
+  }
+}
+
+int main() {
+  for (int i = 0; i < (int)nPoints; i+=2)
+  {
+    Point p1 = points[i];
+    Point p2 = points[i+1];
+    Line line = Line(p1,p2);
+    std::cout << "Line " << i << line.toString() << "Length: " << line.length() <<std::endl;
+  }
+  //instead of hardcoding std::cout in functions, we pass it as a param.
+  //so if we wanted to output to a file, the code for the functions
+  //would not need to change (the code in this function would change).
+  /*std::ostream& out = std::cout;
+
+  outDistances(out); out << std::endl;
+
+  outSizes(out);*/
+}
+#include "point.hh"
+
+#include <cmath>
+#include <string>
+#include <sstream>
+
+/** return distance of this point from other point */
+double Point::distance(const Point& other) const {
+  const auto dx = x - other.x;
+  const auto dy = y - other.y;
+  return sqrt(dx*dx + dy*dy);
+}
+
+std::string Point::toString() const {
+  //declaring s to be a stringstream allows usage similar to std::cout
+  std::stringstream s;
+  s << "(" << x << ", " << y << ")"; //normal (x, y) format
+  return s.str(); //return std::string underlying stringstream
+}
+#ifndef EXPR_HH_
+#define EXPR_HH_
+
+#include "tostring.hh"
+
+#include <memory>
+#include <string>
+
+
+class Expr : public ToString {
+public:
+  virtual int eval() const = 0;
+  virtual std::string dcCode() const = 0;
+};
+
+//ExprPtr is an alias for a smart shared ptr to an Expr.
+//using is like a typedef
+using ExprPtr = std::shared_ptr<Expr>;
+
+/** An IntExpr only contains an integer value */
+class IntExpr : public Expr {
+private:
+  enum class Private { TAG };
+public:
+  const int value;
+  virtual std::string dcCode() const;
+  /** Factory function */
+  static ExprPtr make(int val) {
+    return std::make_shared<IntExpr>(val, Private::TAG);
+  }
+
+  
+  std::string toString() const;
+
+  //use Private to ensure this constructor cannot be called from outside
+  //this class even though it is public
+  IntExpr(int val, Private x) : value(val) { }
+
+  int eval() const { return value; }
+
+}; //IntExpr
+
+//KISS results in repetitive code for binary expressions.
+//Not using alternatives like a template class
+
+
+class AddExpr : public Expr {
+private:
+  enum class Private { TAG };
+public:
+  const ExprPtr left;
+  const ExprPtr right;
+  virtual std::string dcCode() const;
+  /** Factory function */
+  static ExprPtr make(ExprPtr left, ExprPtr right) {
+    return std::make_shared<AddExpr>(left, right, Private::TAG);
+  }
+
+  std::string toString() const;
+
+  //use Private to ensure this constructor cannot be called from outside
+  //this class even though it is public
+  AddExpr(ExprPtr& left, ExprPtr& right, Private x) :
+    left(left), right(right) {
+  }
+
+  int eval() const { return left->eval() + right->eval(); }
+  
+}; //AddExpr
+
+
+class SubExpr : public Expr {
+private:
+  enum class Private { TAG };
+public:
+  const ExprPtr left;
+  const ExprPtr right;
+  virtual std::string dcCode() const;
+  /** Factory function */
+  static ExprPtr make(ExprPtr left, ExprPtr right) {
+    return std::make_shared<SubExpr>(left, right, Private::TAG);
+  }
+
+  std::string toString() const;
+
+  //use Private to ensure this constructor cannot be called from outside
+  //this class even though it is public
+  SubExpr(ExprPtr& left, ExprPtr& right, Private x) :
+    left(left), right(right) {
+  }
+
+  int eval() const { return left->eval() - right->eval(); }
+  
+}; //SubExpr
+
+
+class MulExpr : public Expr {
+private:
+  enum class Private { TAG };
+public:
+  const ExprPtr left;
+  const ExprPtr right;
+  virtual std::string dcCode() const;
+  /** Factory function */
+  static ExprPtr make(ExprPtr left, ExprPtr right) {
+    return std::make_shared<MulExpr>(left, right, Private::TAG);
+  }
+
+  std::string toString() const;
+
+  //use Private to ensure this constructor cannot be called from outside
+  //this class even though it is public
+  MulExpr(ExprPtr& left, ExprPtr& right, Private x) :
+    left(left), right(right) {
+  }
+
+  int eval() const { return left->eval() * right->eval(); }
+  
+}; //MulExpr
+
+class DivExpr : public Expr {
+private:
+  enum class Private { TAG };
+public:
+  const ExprPtr left;
+  const ExprPtr right;
+  virtual std::string dcCode() const;
+  /** Factory function */
+  static ExprPtr make(ExprPtr left, ExprPtr right) {
+    return std::make_shared<DivExpr>(left, right, Private::TAG);
+  }
+
+  std::string toString() const;
+
+  //use Private to ensure this constructor cannot be called from outside
+  //this class even though it is public
+  DivExpr(ExprPtr& left, ExprPtr& right, Private x) :
+    left(left), right(right) {
+  }
+
+  int eval() const { return left->eval() / right->eval(); }
+
+}; //DivExpr
+
+
+
+
+#endif //ifndef EXPR_HH
+#ifndef PARSE_HH_
+#define  PARSE_HH_
+
+#include "expr.hh"
+
+#include <string>
+
+/** Parser for prefix arith expressions involving integers, +, -, *, / */
+ExprPtr parse(std::string str);
+
+
+#endif //ifndef PARSE_HH_
+#ifndef TO_STRING_HH_
+#define TO_STRING_HH_
+
+#include <iostream>
+#include <string>
+
+//Inheriting from this abstract class and defining a toString
+//method allows a class to use << on an ostream.
+struct ToString {
+  virtual std::string toString() const = 0;
+};
+
+std::ostream& operator<<(std::ostream& out, const ToString& obj);
+  
+#endif //ifndef TO_STRING_HH_
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ cat ~/Desktop/cs240/i240b/ssubmit/lab4/exercises/1-point/*.cc *.hh[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat ~/Desktop/cs240/i240b/ssubmit/lab4/exercises/1-point/*.cc *.hh[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake -f ../Naj[K[K[KMaa[Kkj[Kefile 
+g++ -MT tostring.o -MMD -MP -MF .deps/tostring.d -g -Wall -std=c++17 -c tostring.cc
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+[01m[Kmain.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kmain.cc:16:15:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvirtual std::__cxx11::string Expr::dcCode() const[m[K’
+     [01;31m[Kstd::cout << exprP->dcCode[m[K << "p c" << std::endl;
+     [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[Kmain.cc:1:0[m[K:
+[01m[Kexpr.hh:13:23:[m[K [01;36m[Knote: [m[Kdeclared here
+   virtual std::string [01;36m[KdcCode[m[K() const = 0;
+                       [01;36m[K^~~~~~[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ -MT parse.o -MMD -MP -MF .deps/parse.d -g -Wall -std=c++17 -c parse.cc
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+[01m[Kexpr.cc:60:1:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kstd::__cxx11::string MulExpr::dcCode()[m[K’ does not match any in class ‘[01m[KMulExpr[m[K’
+ [01;31m[KMulExpr[m[K::dcCode(){
+ [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:103:23:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual std::__cxx11::string MulExpr::dcCode() const
+   virtual std::string [01;31m[KdcCode[m[K() const;
+                       [01;31m[K^~~~~~[m[K
+[01m[Kexpr.cc:67:1:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kstd::__cxx11::string AddExpr::dcCode()[m[K’ does not match any in class ‘[01m[KAddExpr[m[K’
+ [01;31m[KAddExpr[m[K::dcCode(){
+ [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:53:23:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual std::__cxx11::string AddExpr::dcCode() const
+   virtual std::string [01;31m[KdcCode[m[K() const;
+                       [01;31m[K^~~~~~[m[K
+[01m[Kexpr.cc:74:1:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kstd::__cxx11::string SubExpr::dcCode()[m[K’ does not match any in class ‘[01m[KSubExpr[m[K’
+ [01;31m[KSubExpr[m[K::dcCode(){
+ [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:78:23:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual std::__cxx11::string SubExpr::dcCode() const
+   virtual std::string [01;31m[KdcCode[m[K() const;
+                       [01;31m[K^~~~~~[m[K
+../Makefile:48: recipe for target 'expr.o' failed
+make: *** [expr.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ make -f ../Makefile 
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ ./main ./main  "+ + + / 22   6 * 5 3 - 2 5 * 3 5"[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ /main ./main  "+ + + / 22  [1P[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ main ./main  "+ + + / 22 
+[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cain ./main  "+ + + / 22  6 [1P[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ in ./main  "+ + + / 22  6 *[1P[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ n ./main  "+ + + / 22  6 * [1P[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$  ./main  "+ + + / 22  6 * 5[1P[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ ./main  "+ + + / 22  6 * 5 [1P[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ 
+
+22  6 /  5  3 * +  2  5 - +  3  5 * + p c
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ ./main  "+ + + / 22  6 * 5  3 - 2 5 * 3 5"[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ [6Pmake -f ../Makefile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ make -f ../Makefile ./main  "+ + + / 22  6 * 5  3 - 2 5 * 3 5"
+22 6 / 5 3 * + 2 5 - + 3 5 * + p c
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ !! | dc
+./main  "+ + + / 22  6 * 5 3 - 2 5 * 3 5" | dc
+30
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ ./main  "+ + + / 22  6 * 5  3 - 2 5 * 3 5" | dc[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main "- 3 2" "* + 1 2 5"  | dc
+1
+15
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab5/exercises/2-expr[00m$ exit
+
+Script done on 2020-03-07 20:09:33-0500

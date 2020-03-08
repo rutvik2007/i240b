@@ -42,4 +42,38 @@ DivExpr::toString() const
 {
   return binaryExprToString("/", left, right);
 }
+std::string
+IntExpr::dcCode() const{
+  std::stringstream s;
+  s << this->value << " ";
+  return s.str();
+}
+
+std::string
+DivExpr::dcCode() const{
+  std::stringstream s;
+  s << this->left->dcCode() << this->right->dcCode() << "/ ";
+  return s.str();
+}
+
+std::string
+MulExpr::dcCode() const{
+  std::stringstream s;
+  s << this->left->dcCode() << this->right->dcCode() << "* ";
+  return s.str();
+}
+
+std::string
+AddExpr::dcCode() const{
+  std::stringstream s;
+  s << this->left->dcCode() << this->right->dcCode() << "+ ";
+  return s.str();
+}
+
+std::string
+SubExpr::dcCode() const{
+  std::stringstream s;
+  s << this->left->dcCode() << this->right->dcCode() << "- ";
+  return s.str();
+}
 
