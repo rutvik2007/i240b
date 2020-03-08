@@ -1,0 +1,178 @@
+Script started on 2020-03-07 18:42:25-0500
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises[00m$ cd 1-point/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ code *.hh *.cc
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ make -f ../Makefi;e[K[Kle 
+make: Nothing to be done for 'all'.
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ make clean
+make: *** No rule to make target 'clean'.  Stop.
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ make clean-f ../Makefile [10Pclean[Kmake clean-f ../Makefile [10Pclean[K./amain[K[K[K[Km[K[Kmain
+Line 0(0, 0) -- (3, 4)Length: 5
+Line 2(1, 1) -- (4, 5)Length: 5
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/1-point[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/1-point[00m$ cd ../2-shape/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ code *.hh &[K&[K*>cc[K[K.[K[K.cc
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ make -f ../Makefile
+make: Nothing to be done for 'all'.
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ ./main
+Circle[(0, 0), 1] perimeter: 6.28319 area: 3.14159
+Rectangle[(1, 1), (4, 5)] perimeter: 14 area: 12
+Circle[(1, 1), 2] perimeter: 12.5664 area: 12.5664
+Rectangle[(0, 0), (5, 4)] perimeter: 18 area: 20
+
+sizeof(double) = 8
+sizeof(Point) = 24
+
+sizeof(ToString) = 8
+sizeof(Shape) = 8
+sizeof(Circle) = 40
+sizeof(Rectangle) = 56
+
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/2-shape[00m$ cd ..?[K/3-expr/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ code *.cc *.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ code *.cc *.hh[1Pd ../3-expr/[7P./maincd ../3-expr/[7P./mainmake -f ../Makefile[5Pcode *.hh *.ccd ../2-shape/[8P./maincd ../2-shape/ode *.hh *.ccmake -f ../Makefile./main[Kcd ../3-expr/ode *.cc *.hh[Kcode *.cc *.hh[1Pd ../3-expr/[7P./mainmake -f ../Makefile[5Pcode *.hh *.ccd ../2-shape/ode *.hh *.ccd ../2-shape/[8P./mainmake clean[4P./mainmake clean-f ../Makefile 
+g++ -MT tostring.o -MMD -MP -MF .deps/tostring.d -g -Wall -std=c++17 -c tostring.cc
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ -MT parse.o -MMD -MP -MF .deps/parse.d -g -Wall -std=c++17 -c parse.cc
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+[01m[Kexpr.cc:46:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint IntExpr::eval()[m[K’ does not match any in class ‘[01m[KIntExpr[m[K’
+ int [01;31m[KIntExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:24:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int IntExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:50:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint AddExpr::eval()[m[K’ does not match any in class ‘[01m[KAddExpr[m[K’
+ int [01;31m[KAddExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:51:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int AddExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:53:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint DivExpr::eval()[m[K’ does not match any in class ‘[01m[KDivExpr[m[K’
+ int [01;31m[KDivExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:116:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int DivExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:56:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint MulExpr::eval()[m[K’ does not match any in class ‘[01m[KMulExpr[m[K’
+ int [01;31m[KMulExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:95:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int MulExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+[01m[Kexpr.cc:59:5:[m[K [01;31m[Kerror: [m[Kprototype for ‘[01m[Kint SubExpr::eval()[m[K’ does not match any in class ‘[01m[KSubExpr[m[K’
+ int [01;31m[KSubExpr[m[K::eval(){
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:78:7:[m[K [01;31m[Kerror: [m[Kcandidate is: virtual int SubExpr::eval() const
+   int [01;31m[Keval[m[K() const;
+       [01;31m[K^~~~[m[K
+../Makefile:48: recipe for target 'expr.o' failed
+make: *** [expr.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile 
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int AddExpr::eval() const[m[K’:
+[01m[Kexpr.cc:51:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->right->eval([01;31m[K)[m[K + this->left->eval();
+                            [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:51:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->right->eval() + this->left->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int DivExpr::eval() const[m[K’:
+[01m[Kexpr.cc:54:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval([01;31m[K)[m[K / this->right->eval();
+                           [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:54:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval() / this->right->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int MulExpr::eval() const[m[K’:
+[01m[Kexpr.cc:57:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval([01;31m[K)[m[K * this->right->eval();
+                           [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:57:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval() * this->right->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:[m[K In member function ‘[01m[Kvirtual int SubExpr::eval() const[m[K’:
+[01m[Kexpr.cc:60:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval([01;31m[K)[m[K - this->right->eval();
+                           [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+[01m[Kexpr.cc:60:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvirtual int Expr::eval() const[m[K’ is private within this context
+   return this->left->eval() - this->right->eval([01;31m[K)[m[K;
+                                                 [01;31m[K^[m[K
+In file included from [01m[Kexpr.cc:1:0[m[K:
+[01m[Kexpr.hh:11:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   virtual int [01;36m[Keval[m[K() const = 0;
+               [01;36m[K^~~~[m[K
+../Makefile:48: recipe for target 'expr.o' failed
+make: *** [expr.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ -MT parse.o -MMD -MP -MF .deps/parse.d -g -Wall -std=c++17 -c parse.cc
+g++ -MT expr.o -MMD -MP -MF .deps/expr.d -g -Wall -std=c++17 -c expr.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2"
+(1) + (2)
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2"make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+[01m[Kmain.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kmain.cc:15:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing ExprPtr = class std::shared_ptr<Expr> {aka class std::shared_ptr<Expr>}[m[K’ has no member named ‘[01m[Keval[m[K’
+     std::cout << *parse(argv[i]) << *parse(argv[i]).[01;31m[Keval[m[K() << std::endl;
+                                                     [01;31m[K^~~~[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./,m[K[K[K[Kmake -f ../Makefile [6P./main "+ 1 2"make -f ../Makefile [6Pcode *.cc *.hh[1Pd ../3-expr/ode *.cc *.hhmake -f ../Makefile [6P./main "+ 1 2"
+(1) + (2)3
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2"make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ tostring.o main.o parse.o expr.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main tostring.o main.o parse.o expr.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ make -f ../Makefile [6P./main "+ 1 2"
+(1) + (2) = 3
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ ./main "+ 1 2" "- 3 4" "* 55 6" "/ 77 8"
+(1) + (2) = 3
+(3) - (4) = -1
+(5) * (6) = 30
+(77) / (8) = 9
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab4/exercises/3-expr[00m$ exit
+
+Script done on 2020-03-07 19:15:28-0500

@@ -43,3 +43,19 @@ DivExpr::toString() const
   return binaryExprToString("/", left, right);
 }
 
+int IntExpr::eval() const {
+  return this->value;
+}
+
+int AddExpr::eval() const {
+  return this->right->eval() + this->left->eval();
+}
+int DivExpr::eval() const {
+  return this->left->eval() / this->right->eval();
+}
+int MulExpr::eval() const {
+  return this->left->eval() * this->right->eval();
+}
+int SubExpr::eval() const {
+  return this->left->eval() - this->right->eval();
+}

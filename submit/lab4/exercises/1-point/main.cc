@@ -1,5 +1,5 @@
 #include "point.hh"
-
+#include "line.hh"
 #include <iostream>
 
 //declare an array of points
@@ -32,13 +32,19 @@ outDistances(std::ostream& out)
 }
 
 int main() {
-
+  for (int i = 0; i < (int)nPoints; i+=2)
+  {
+    Point p1 = points[i];
+    Point p2 = points[i+1];
+    Line line = Line(p1,p2);
+    std::cout << "Line " << i << line.toString() << "Length: " << line.length() <<std::endl;
+  }
   //instead of hardcoding std::cout in functions, we pass it as a param.
   //so if we wanted to output to a file, the code for the functions
   //would not need to change (the code in this function would change).
-  std::ostream& out = std::cout;
+  /*std::ostream& out = std::cout;
 
   outDistances(out); out << std::endl;
 
-  outSizes(out);
+  outSizes(out);*/
 }
