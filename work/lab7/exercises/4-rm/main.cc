@@ -14,7 +14,7 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "out.hh"
+#include "rm.hh"
 
 /** Return vector of int's read from filePath.  If filePath is
  *  "-" read from stdin.

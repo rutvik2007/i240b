@@ -14,7 +14,7 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "out.hh"
+#include "sort.hh"
 
 /** Return vector of int's read from filePath.  If filePath is
  *  "-" read from stdin.
@@ -56,6 +56,7 @@ go(std::string containerSpec, std::vector<int> ints, int arg)
     loopFn(container.begin(), container.end(), arg);
     noLoopFn(container.begin(), container.end(), arg);
   }
+  #if 0
   else if (containerSpec == "forward_list") {
     std::forward_list<int> container(ints.begin(), ints.end());
     loopFn(container.begin(), container.end(), arg);
@@ -76,6 +77,7 @@ go(std::string containerSpec, std::vector<int> ints, int arg)
     loopFn(container.begin(), container.end(), arg);
     noLoopFn(container.begin(), container.end(), arg);
   }
+  #endif
   else if (containerSpec == "vector") {
     loopFn(ints.begin(), ints.end(), arg);
     noLoopFn(ints.begin(), ints.end(), arg);

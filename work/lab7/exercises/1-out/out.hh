@@ -13,7 +13,9 @@
 template <typename Iterator>
 void loopFn(Iterator begin, Iterator end, int arg) {
   std::cout << "[ ";
-  //@TODO
+  for(auto p = begin; p != end; p++){
+    std::cout<<*p<<" ";
+  }
   std::cout << "]" << std::endl;
 }
 

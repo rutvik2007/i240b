@@ -1,0 +1,828 @@
+Script started on 2020-03-23 00:23:10-0400
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises[00m$ cd 3-sort/[K[K[K[K[K[K[K2-find/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ code *
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ code *
+
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ 
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ c [Kp ../1-out/main.cc .
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ make -f Ma[K[K../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ .[Kcat ../1-out/put[K[K[Kout.hh 
+#ifndef OUT_HH_
+#define OUT_HH_
+
+#include <algorithm>
+#include <iostream>
+#include <vector>
+
+
+/** Output elements of [begin, end) on std::cout separated by single
+ *  space.  The seqence of elements should be surrounded by [ and ]
+ *  and terminated by a newline.
+ */
+template <typename Iterator>
+void loopFn(Iterator begin, Iterator end, int arg) {
+  std::cout << "[ ";
+  for(auto p = begin; p != end; p++){
+    std::cout<<*p<<" ";
+  }
+  std::cout << "]" << std::endl;
+}
+
+/** Exactly like loopFn() but no loops should be used */
+template <typename Iterator>
+void noLoopFn(Iterator begin, Iterator end, int arg) {
+  std::cout << "[ ";
+  auto print = [](const int& i) { std::cout << i << " " ; };
+  std::for_each(begin, end, print);
+  std::cout << "]" << std::endl;
+}
+
+#endif //ifndef OUT_HH_
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ cat ../1-out/out.hh make -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:[m[K In function ‘[01m[Kvoid loopFn(Iterator, Iterator, int)[m[K’:
+[01m[Kfind.hh:13:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope
+       [01;31m[Kcout[m[K << "FOUND"<<std::endl;
+       [01;31m[K^~~~[m[K
+[01m[Kfind.hh:13:7:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[Kmain.cc:3:0[m[K:
+[01m[K/usr/include/c++/7/iostream:61:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cout[m[K’
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:17:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope
+   [01;31m[Kcout[m[K << "NOT FOUND"<<std::endl;
+   [01;31m[K^~~~[m[K
+[01m[Kfind.hh:17:3:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[Kmain.cc:3:0[m[K:
+[01m[K/usr/include/c++/7/iostream:61:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cout[m[K’
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:[m[K In function ‘[01m[Kvoid noLoopFn(Iterator, Iterator, int)[m[K’:
+[01m[Kfind.hh:25:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope
+     [01;31m[Kcout[m[K << "FOUND";
+     [01;31m[K^~~~[m[K
+[01m[Kfind.hh:25:5:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[Kmain.cc:3:0[m[K:
+[01m[K/usr/include/c++/7/iostream:61:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cout[m[K’
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:28:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope
+     [01;31m[Kcout[m[K << "NOT FOUND";
+     [01;31m[K^~~~[m[K
+[01m[Kfind.hh:28:5:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[Kmain.cc:3:0[m[K:
+[01m[K/usr/include/c++/7/iostream:61:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cout[m[K’
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ ./main [K[K[K[K[K[K[Kmake -f ../Makefile cat ../1-out/out.hh[Cmake -f ../Makefile[Ccp ../1-out/main.cc .ode *[Kd 2-find/[2Pat log2[4Pdasdcat log2d 2-find/[4Pode *p ../1-out/main.cc .[1Pmake -f ../Makefile cat ../1-out/out.hh[Cmake -f ../Makefile[C[K./main deque ../test.data  5
+NOT FOUND
+NOT FOUND]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ ./main deque ../test.data 55[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ [6Pmake -f ../Makefile
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:[m[K In function ‘[01m[Kvoid noLoopFn(Iterator, Iterator, int)[m[K’:
+[01m[Kfind.hh:25:26:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::basic_ostream<char>[m[K’ and ‘[01m[K<unresolved overloaded function type>[m[K’)
+     [01;31m[Kstd::cout << "FOUND" << std[m[K::end;
+     [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:108:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:108:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}[m[K’
+[01m[K/usr/include/c++/7/ostream:117:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:117:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}[m[K’
+[01m[K/usr/include/c++/7/ostream:127:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:127:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+[01m[K/usr/include/c++/7/ostream:166:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:166:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Klong int[m[K’
+[01m[K/usr/include/c++/7/ostream:170:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(unsigned long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:170:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Klong unsigned int[m[K’
+[01m[K/usr/include/c++/7/ostream:174:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(bool __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:174:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kbool[m[K’
+In file included from [01m[K/usr/include/c++/7/ostream:693:0[m[K,
+                 from [01m[K/usr/include/c++/7/istream:39[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kshort int[m[K’
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:181:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(unsigned short __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:181:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kshort unsigned int[m[K’
+In file included from [01m[K/usr/include/c++/7/ostream:693:0[m[K,
+                 from [01m[K/usr/include/c++/7/istream:39[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kint[m[K’
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:192:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(unsigned int __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:192:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kunsigned int[m[K’
+[01m[K/usr/include/c++/7/ostream:201:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(long long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:201:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Klong long int[m[K’
+[01m[K/usr/include/c++/7/ostream:205:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(unsigned long long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:205:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Klong long unsigned int[m[K’
+[01m[K/usr/include/c++/7/ostream:220:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(double __f)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:220:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kdouble[m[K’
+[01m[K/usr/include/c++/7/ostream:224:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(float __f)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:224:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kfloat[m[K’
+[01m[K/usr/include/c++/7/ostream:232:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(long double __f)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:232:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Klong double[m[K’
+[01m[K/usr/include/c++/7/ostream:245:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       [01;36m[Koperator[m[K<<(const void* __p)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:245:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kconst void*[m[K’
+In file included from [01m[K/usr/include/c++/7/ostream:693:0[m[K,
+                 from [01m[K/usr/include/c++/7/istream:39[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}[m[K’
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:682:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)
+     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:682:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[K_Tp[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:574:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:574:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kconst unsigned char*[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:569:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:569:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kconst signed char*[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:556:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:556:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kconst char*[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/ostream:693:0[m[K,
+                 from [01m[K/usr/include/c++/7/istream:39[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kconst char*[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:539:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:539:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kconst char*[m[K’
+[01m[K/usr/include/c++/7/ostream:519:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:519:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kunsigned char[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:514:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:514:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Ksigned char[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:508:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:508:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kchar[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:502:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:502:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kchar[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/istream:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/ostream:497:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT) [with _CharT = char; _Traits = std::char_traits<char>]
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/ostream:497:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kchar[m[K’
+In file included from [01m[K/usr/include/c++/7/bits/ios_base.h:46:0[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/system_error:217:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/system_error:217:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::end[m[K’ (type ‘[01m[K<unresolved overloaded function type>[m[K’) to type ‘[01m[Kconst std::error_code&[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/string:52:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/bits/basic_string.h:6284:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:6284:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Kfind.hh:25:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[K_Alloc[m[K’
+     std::cout << "FOUND" << std::[01;36m[Kend[m[K;
+                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/basic_string.h:48:0[m[K,
+                 from [01m[K/usr/include/c++/7/string:52[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/string_view:559:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>) [with _CharT = char; _Traits = std::char_traits<char>]
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/string_view:559:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kstd::basic_string_view<char>[m[K’
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ make -f ../Makefile ./main deque ../test.data 55
+NOT FOUND
+NOT FOUND]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ ./main deque ../test.data 55[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ [6Pmake -f ../Makefile
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ make -f ../Makefile ./main deque ../test.data 55[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ [6Pmake -f ../Makefile
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kmake -f ../Makefile ./main deque ../test.data 55
+NOT FOUND
+NOT FOUND
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ cat ../test.data 
+22
+43
+12
+56
+64
+42
+11
+22
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ cat ../test.data ./main deque ../test.data 55[K22
+FOUND
+FOUND
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ ./main deque ../test.data 222[K[K11
+FOUND
+FOUND
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ ./main deque ../test.data 111[K[K23
+NOT FOUND
+NOT FOUND
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/2-find[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/2-find[00m$ cd ..3-[K[K/3-sort/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ ls
+sort.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$  ls.[K ..
+[0m[01;34m1-out[0m  [01;34m2-find[0m  [01;34m3-sort[0m  [01;34m4-rm[0m  a.out  lab7.log  log2  Makefile  test.data
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ cp ../1-out/main.cc .
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ cp ../1-out/main.cc .ls[Kcd ../3-sort/./main deque ../test.data 2231122[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ [9Pcat
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 55[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ [6Pmake -f ../Makefile
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 55[A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ [6Pmake -f ../Makefile
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+/usr/include/c++/7/bits/stl_algo.h: In instantiation of ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = std::_Fwd_list_iterator<int>; _Compare = __gnu_cxx::__ops::_Iter_less_iter][m[K’:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:4836:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter) [with _RAIter = std::_Fwd_list_iterator<int>][m[K’
+[01m[Ksort.hh:19:12:[m[K   required from ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Fwd_list_iterator<int>][m[K’
+[01m[Kmain.cc:61:51:[m[K   required from here
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’ and ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’)
+     std::__lg([01;31m[K__last - __first[m[K) * 2,
+               [01;31m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/algorithm:61[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:392:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> constexpr decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:392:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/algorithm:61[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1194:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> constexpr decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1194:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/deque:64:0[m[K,
+                 from [01m[Kmain.cc:8[m[K:
+[01m[K/usr/include/c++/7/bits/stl_deque.h:351:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Ref, class _Ptr> typename std::_Deque_iterator<_Tp, _Ref, _Ptr>::difference_type std::operator-(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     [01;36m[Koperator[m[K-(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_deque.h:351:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/deque:64:0[m[K,
+                 from [01m[Kmain.cc:8[m[K:
+[01m[K/usr/include/c++/7/bits/stl_deque.h:363:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> typename std::_Deque_iterator<_Tp, _Ref, _Ptr>::difference_type std::operator-(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     [01;36m[Koperator[m[K-(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_deque.h:363:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/vector:65:0[m[K,
+                 from [01m[Kmain.cc:12[m[K:
+[01m[K/usr/include/c++/7/bits/stl_bvector.h:208:3:[m[K [01;36m[Knote: [m[Kcandidate: std::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)
+   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_bvector.h:208:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’ to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+/usr/include/c++/7/bits/stl_algo.h: In instantiation of ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = std::_List_iterator<int>; _Compare = __gnu_cxx::__ops::_Iter_less_iter][m[K’:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:4836:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter) [with _RAIter = std::_List_iterator<int>][m[K’
+[01m[Ksort.hh:19:12:[m[K   required from ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_List_iterator<int>][m[K’
+[01m[Kmain.cc:66:51:[m[K   required from here
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd::_List_iterator<int>[m[K’ and ‘[01m[Kstd::_List_iterator<int>[m[K’)
+     std::__lg([01;31m[K__last - __first[m[K) * 2,
+               [01;31m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/algorithm:61[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:392:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> constexpr decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:392:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_List_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/algorithm:61[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1194:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> constexpr decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1194:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_List_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/deque:64:0[m[K,
+                 from [01m[Kmain.cc:8[m[K:
+[01m[K/usr/include/c++/7/bits/stl_deque.h:351:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Ref, class _Ptr> typename std::_Deque_iterator<_Tp, _Ref, _Ptr>::difference_type std::operator-(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     [01;36m[Koperator[m[K-(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_deque.h:351:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_List_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/deque:64:0[m[K,
+                 from [01m[Kmain.cc:8[m[K:
+[01m[K/usr/include/c++/7/bits/stl_deque.h:363:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> typename std::_Deque_iterator<_Tp, _Ref, _Ptr>::difference_type std::operator-(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     [01;36m[Koperator[m[K-(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_deque.h:363:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_List_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/vector:65:0[m[K,
+                 from [01m[Kmain.cc:12[m[K:
+[01m[K/usr/include/c++/7/bits/stl_bvector.h:208:3:[m[K [01;36m[Knote: [m[Kcandidate: std::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)
+   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_bvector.h:208:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::_List_iterator<int>[m[K’ to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+/usr/include/c++/7/bits/stl_algo.h: In instantiation of ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = std::_Rb_tree_const_iterator<int>; _Compare = __gnu_cxx::__ops::_Iter_less_iter][m[K’:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:4836:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter) [with _RAIter = std::_Rb_tree_const_iterator<int>][m[K’
+[01m[Ksort.hh:19:12:[m[K   required from ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Rb_tree_const_iterator<int>][m[K’
+[01m[Kmain.cc:71:51:[m[K   required from here
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’ and ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’)
+     std::__lg([01;31m[K__last - __first[m[K) * 2,
+               [01;31m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/algorithm:61[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:392:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> constexpr decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:392:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/algorithm:61[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1194:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> constexpr decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1194:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/deque:64:0[m[K,
+                 from [01m[Kmain.cc:8[m[K:
+[01m[K/usr/include/c++/7/bits/stl_deque.h:351:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Ref, class _Ptr> typename std::_Deque_iterator<_Tp, _Ref, _Ptr>::difference_type std::operator-(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     [01;36m[Koperator[m[K-(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_deque.h:351:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/deque:64:0[m[K,
+                 from [01m[Kmain.cc:8[m[K:
+[01m[K/usr/include/c++/7/bits/stl_deque.h:363:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> typename std::_Deque_iterator<_Tp, _Ref, _Ptr>::difference_type std::operator-(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     [01;36m[Koperator[m[K-(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_deque.h:363:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/7/algorithm:62:0[m[K,
+                 from [01m[Kmain.cc:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_algo.h:1969:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+     std::__lg([01;36m[K__last - __first[m[K) * 2,
+               [01;36m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/vector:65:0[m[K,
+                 from [01m[Kmain.cc:12[m[K:
+[01m[K/usr/include/c++/7/bits/stl_bvector.h:208:3:[m[K [01;36m[Knote: [m[Kcandidate: std::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)
+   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_bvector.h:208:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’ to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ ls
+main.cc  sort.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ lsmake -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ ./main ../[K[K[K../test.data 
+usage: ./main CONTAINER_SPEC INTS_DATA_FILE [INT]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ ./main ../test.data [1@d[1@e[1@q[1@u[1@e ../test.data  [A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[ 11 12 22 22 42 43 56 64 ]
+[ 11 12 22 22 42 43 56 64 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ ./main deque ../test.data  [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@[[1@]
+[ 11 12 22 22 42 43 56 64 ]
+[ 11 12 22 22 42 43 56 64 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ ./main [] ../test.data [1P[1P[1@c[1@a[1@s[1@c
+unknown container casc
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ ./main casc ../test.data [C[1P[1P[1P[1P[1@v[1@e[1@c[1@to ../test.data  [A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ [C[C[C[C[C[C[C[C[C[C[C[Cr ../test.data  [A]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[ 11 12 22 22 42 43 56 64 ]
+[ 11 12 22 22 42 43 56 64 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/3-sort[00m$ cd .. 4[K[K/4-rm/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ls
+rm.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ cp ../1-out/main.cc .
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ls
+main.cc  rm.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ lscp ../1-out/main.cc .ls[Kcd ../4-rm/./main vector ../test.data [2Pcasc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P[][C[C[C[C[C[C[C[C[C[C[C[C[C[C[3@deque[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P[C[C[C[C[C[C[C[C[C[C[C[C[Cmake -f ../Makefile[Cls[Kmake -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main 
+usage: ./main CONTAINER_SPEC INTS_DATA_FILE [INT]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main [13@make -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = int*][m[K’:
+[01m[Kmain.cc:50:51:[m[K   required from here
+[01m[Krm.hh:30:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+   for(p[01;35m[K;[m[K p!=begin; p++){
+        [01;35m[K^[m[K
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Deque_iterator<int, int&, int*>][m[K’:
+[01m[Kmain.cc:56:51:[m[K   required from here
+[01m[Krm.hh:30:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Fwd_list_iterator<int>][m[K’:
+[01m[Kmain.cc:61:51:[m[K   required from here
+[01m[Krm.hh:30:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_List_iterator<int>][m[K’:
+[01m[Kmain.cc:66:51:[m[K   required from here
+[01m[Krm.hh:30:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Rb_tree_const_iterator<int>][m[K’:
+[01m[Kmain.cc:71:51:[m[K   required from here
+[01m[Krm.hh:30:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >][m[K’:
+[01m[Kmain.cc:80:41:[m[K   required from here
+[01m[Krm.hh:30:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+g++ main.o -o main
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main deque ../test.data 
+[ ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main deque ../test.data 5
+[ ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main deque ../test.data 5[K[6Pmake -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = int*][m[K’:
+[01m[Kmain.cc:50:51:[m[K   required from here
+[01m[Krm.hh:29:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+   for(p[01;35m[K;[m[K p!=std::find(begin, end, arg); p++){
+        [01;35m[K^[m[K
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Deque_iterator<int, int&, int*>][m[K’:
+[01m[Kmain.cc:56:51:[m[K   required from here
+[01m[Krm.hh:29:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Fwd_list_iterator<int>][m[K’:
+[01m[Kmain.cc:61:51:[m[K   required from here
+[01m[Krm.hh:29:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_List_iterator<int>][m[K’:
+[01m[Kmain.cc:66:51:[m[K   required from here
+[01m[Krm.hh:29:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Rb_tree_const_iterator<int>][m[K’:
+[01m[Kmain.cc:71:51:[m[K   required from here
+[01m[Krm.hh:29:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >][m[K’:
+[01m[Kmain.cc:80:41:[m[K   required from here
+[01m[Krm.hh:29:8:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+g++ main.o -o main
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ make -f ../Makefile ./main deque ../test.data 5[K5
+[ 22 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ cat ../test.data 
+22
+43
+12
+56
+64
+42
+11
+22
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ cat ../test.data ./main deque ../test.data 5[K12 [A
+[ 22 43 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pcat ../test.data 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 5[7Pmake -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ make -f ../Makefile ./main deque ../test.data 12 [A
+[ 22 43 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pmake -f ../Makefile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pcat ../test.data 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pmake -f ../Makefile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pmake -f ../Makefile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pmake -f ../Makefile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Krm.hh:[m[K In function ‘[01m[Kvoid loopFn(Iterator, Iterator, int)[m[K’:
+[01m[Krm.hh:28:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+   for(auto p = begin; p != end[01;31m[K)[m[K{
+                               [01;31m[K^[m[K
+[01m[Krm.hh:[m[K In function ‘[01m[Kvoid noLoopFn(Iterator, Iterator, int)[m[K’:
+[01m[Krm.hh:44:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvec[m[K’ was not declared in this scope
+   outContainer([01;31m[Kvec[m[K.begin(), vec.end());
+                [01;31m[K^~~[m[K
+[01m[Krm.hh:44:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kgetc[m[K’
+   outContainer([01;36m[Kvec[m[K.begin(), vec.end());
+                [01;36m[K^~~[m[K
+                [32m[Kgetc[m[K
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = int*][m[K’:
+[01m[Kmain.cc:50:51:[m[K   required from here
+[01m[Krm.hh:29:5:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+     [01;35m[Kif[m[K(*p = arg && !seen){
+     [01;35m[K^~[m[K
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Deque_iterator<int, int&, int*>][m[K’:
+[01m[Kmain.cc:56:51:[m[K   required from here
+[01m[Krm.hh:29:5:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Fwd_list_iterator<int>][m[K’:
+[01m[Kmain.cc:61:51:[m[K   required from here
+[01m[Krm.hh:29:5:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_List_iterator<int>][m[K’:
+[01m[Kmain.cc:66:51:[m[K   required from here
+[01m[Krm.hh:29:5:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Rb_tree_const_iterator<int>][m[K’:
+[01m[Kmain.cc:71:51:[m[K   required from here
+[01m[Krm.hh:29:11:[m[K [01;31m[Kerror: [m[Kassignment of read-only location ‘[01m[Kp.std::_Rb_tree_const_iterator<int>::operator*()[m[K’
+     if([01;31m[K*p = arg && !seen[m[K){
+        [01;31m[K~~~^~~~~~~~~~~~~~[m[K
+[01m[Krm.hh:29:5:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+     [01;35m[Kif[m[K(*p = arg && !seen){
+     [01;35m[K^~[m[K
+rm.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >][m[K’:
+[01m[Kmain.cc:80:41:[m[K   required from here
+[01m[Krm.hh:29:5:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Krm.hh:[m[K In function ‘[01m[Kvoid loopFn(Iterator, Iterator, int)[m[K’:
+[01m[Krm.hh:28:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+   for(auto p = begin; p != end[01;31m[K)[m[K{
+                               [01;31m[K^[m[K
+[01m[Krm.hh:[m[K In function ‘[01m[Kvoid noLoopFn(Iterator, Iterator, int)[m[K’:
+[01m[Krm.hh:44:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvec[m[K’ was not declared in this scope
+   outContainer([01;31m[Kvec[m[K.begin(), vec.end());
+                [01;31m[K^~~[m[K
+[01m[Krm.hh:44:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kgetc[m[K’
+   outContainer([01;36m[Kvec[m[K.begin(), vec.end());
+                [01;36m[K^~~[m[K
+                [32m[Kgetc[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+[01m[Krm.hh:[m[K In function ‘[01m[Kvoid noLoopFn(Iterator, Iterator, int)[m[K’:
+[01m[Krm.hh:44:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvec[m[K’ was not declared in this scope
+   outContainer([01;31m[Kvec[m[K.begin(), vec.end());
+                [01;31m[K^~~[m[K
+[01m[Krm.hh:44:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kgetc[m[K’
+   outContainer([01;36m[Kvec[m[K.begin(), vec.end());
+                [01;36m[K^~~[m[K
+                [32m[Kgetc[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ make -f ../Makefile ./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pmake -f ../Makefile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main ../test.data 22
+cannot read 22: No such file or directory
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ./main ../test.data 22[C[K[K[Kd../test.datae../test.dataq../test.datae../test.datau../test.data[1P../test.data[1P../test.datau../test.datae../test.data ../test.data[C[C[C[C[C[C[C[C[C[C[C[C 22 [A
+[ 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ca [Kt ../test.data 
+22
+43
+12
+56
+64
+42
+11
+22
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ cat ../test.data [C./main deque ../test.data 22 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pcat ../test.data 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@o[1@v[1@e[1@r[1P[1P[1P[1P[1@*
+22
+43
+12
+56
+64
+42
+11
+22
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ cat ../*.data [C[C[C[C[1P [1P [1P [1P [1P [1P [1P / * d a t a [1P [1P [1P [1P . d a t a 
+22
+43
+12
+56
+64
+42
+11
+22
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ls[K[Kcd ..[K[K[K[K[Kls ..
+[0m[01;34m1-out[0m  [01;34m2-find[0m  [01;34m3-sort[0m  [01;34m4-rm[0m  a.out  lab7.log  log2  Makefile  test.data
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ls ../1-out/
+[0m[01;32mmain[0m  main.cc  main.o  out.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ ls ../1-out/[Kcat ../*.data [3@test[C[C[C[C[C[C./main deque ../test.data 22 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pmake -f ../Makefile ./main deque ../test.data 12 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pmake -f ../Makefile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+rm.hh: In instantiation of ‘[01m[Kvoid noLoopFn(Iterator, Iterator, int) [with Iterator = int*][m[K’:
+[01m[Kmain.cc:51:57:[m[K   required from here
+[01m[Krm.hh:43:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kfind[m[K’ was not declared in this scope
+   auto first_occurence = [01;31m[Kfind(begin, end, arg)[m[K;
+                          [01;31m[K~~~~^~~~~~~~~~~~~~~~~[m[K
+[01m[Krm.hh:43:30:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/c++/7/bits/locale_facets.h:48:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/basic_ios.h:37[m[K,
+                 from [01m[K/usr/include/c++/7/ios:44[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/fstream:38[m[K,
+                 from [01m[Kmain.cc:2[m[K:
+[01m[K/usr/include/c++/7/bits/streambuf_iterator.h:369:5:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::find[m[K’
+     [01;36m[Kfind[m[K(istreambuf_iterator<_CharT> __first,
+     [01;36m[K^~~~[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ make -f ../Makefile [8Pls ../1-out/[K/1-out/make -f ../Makefile [8Pls ../1-out/[Kcat ../*.data [3@test[C[C[C[C[C[C./main deque ../test.data 22 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdeque ../test.data 22 [A
+[ 43 12 56 64 42 11 22 ]
+[ 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/4-rm[00m$ git[K[K[Kexit
+
+Script done on 2020-03-23 01:09:17-0400

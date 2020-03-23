@@ -1,0 +1,139 @@
+Script started on 2020-03-20 22:16:46-0400
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises[00m$ ls
+[0m[01;34m1-out[0m  [01;34m2-find[0m  [01;34m3-sort[0m  [01;34m4-rm[0m  lab7.log  Makefile  test.data
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises[00m$ cd 1-out/
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ gedit [K[K[K[K[K[Kls
+main.cc  out.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ gedit main.cc 
+^C
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ !! &
+gedit main.cc  &
+[1] 2829
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ make -f Mafile [K[K[K[K[K[K[K../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ls
+[0m[01;32mmain[0m  main.cc  main.o  out.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ls
+[0m[01;32mmain[0m  main.cc  main.o  out.hh
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ./main deu[Kqeu[K[Kue ../ts[Kest/[K.data 
+[ ]
+[ 22 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ./main deque ../test.data ls[K./main deque ../test.data ls[Kmake -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+In file included from [01m[Kmain.cc:17:0[m[K:
+out.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Deque_iterator<int, int&, int*>][m[K’:
+[01m[Kmain.cc:50:51:[m[K   required from here
+[01m[Kout.hh:16:3:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kbegin[m[K’ from ‘[01m[Kstd::_Deque_iterator<int, int&, int*>[m[K’ to ‘[01m[Kbool[m[K’
+   [01;31m[Kfor[m[K(; begin; begin++){
+   [01;31m[K^~~[m[K
+out.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Fwd_list_iterator<int>][m[K’:
+[01m[Kmain.cc:55:51:[m[K   required from here
+[01m[Kout.hh:16:3:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kbegin[m[K’ from ‘[01m[Kstd::_Fwd_list_iterator<int>[m[K’ to ‘[01m[Kbool[m[K’
+out.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_List_iterator<int>][m[K’:
+[01m[Kmain.cc:60:51:[m[K   required from here
+[01m[Kout.hh:16:3:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kbegin[m[K’ from ‘[01m[Kstd::_List_iterator<int>[m[K’ to ‘[01m[Kbool[m[K’
+out.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = std::_Rb_tree_const_iterator<int>][m[K’:
+[01m[Kmain.cc:65:51:[m[K   required from here
+[01m[Kout.hh:16:3:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kbegin[m[K’ from ‘[01m[Kstd::_Rb_tree_const_iterator<int>[m[K’ to ‘[01m[Kbool[m[K’
+out.hh: In instantiation of ‘[01m[Kvoid loopFn(Iterator, Iterator, int) [with Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >][m[K’:
+[01m[Kmain.cc:74:41:[m[K   required from here
+[01m[Kout.hh:16:3:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kbegin[m[K’ from ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >[m[K’ to ‘[01m[Kbool[m[K’
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ make -f ../Makefile [6@./main deque ../test.data[C[6Pmake -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ./maun[K[K[K[K[K[Kmake -f ../Makefile [6@./main deque ../test.data[Cls[Kmake -f ../Makefile [4Pgedit main.cc  &[Kls[Kcd 1-out/ls[Kkill -9 10151top[Kkill -9 10151ls[Kcd 1-out/ls[Kgedit main.cc  &make -f ../Makefile ls[K./main deque ../test.data [6Pmake -f ../Makefile[C[6@./main deque ../test.data[C
+[ 22 43 12 56 64 42 11 22 ]
+[ 22 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ./main deque ../test.data [6Pmake -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+[01m[Kmain.cc:[m[K In function ‘[01m[Kvoid go(std::__cxx11::string, std::vector<int>, int)[m[K’:
+[01m[Kmain.cc:47:22:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+     for(int i = 0; [01;35m[Ki < ints.size()[m[K; i++){
+                    [01;35m[K~~^~~~~~~~~~~~~[m[K
+[01m[Kmain.cc:52:14:[m[K [01;31m[Kerror: [m[K‘[01m[Karr[m[K’ was not declared in this scope
+     delete[] [01;31m[Karr[m[K;
+              [01;31m[K^~~[m[K
+[01m[Kmain.cc:52:14:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Karg[m[K’
+     delete[] [01;36m[Karr[m[K;
+              [01;36m[K^~~[m[K
+              [32m[Karg[m[K
+../Makefile:48: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ make -f ../Makefile 
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+[01m[Kmain.cc:[m[K In function ‘[01m[Kvoid go(std::__cxx11::string, std::vector<int>, int)[m[K’:
+[01m[Kmain.cc:47:22:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+     for(int i = 0; [01;35m[Ki < ints.size()[m[K; i++){
+                    [01;35m[K~~^~~~~~~~~~~~~[m[K
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ make -f ../Makefile [6@./main deque ../test.data[C[6Pmake -f ../Makefile[C[6@./main deque ../test.data[C[6Pmake -f ../Makefile[C[6@./main deque ../test.data[C[6Pmake -f ../Makefile[C[6@./main deque ../test.data[C[6Pmake -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ./make -f ../Makefile [6@./main deque ../test.data[C[6Pmake -f ../Makefile[C[6@./main deque ../test.data[C
+[ 22 43 12 56 64 42 11 22 ]
+[ 22 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ./main deque ../test.data [C\ ../test.data  [A
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C\ ../test.data 
+ [A
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C ../test.data  
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@[[1@][3Pmake -f ../Makefile[C[6@./main deque ../test.data[C^[e ../test.data 
+ [A
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Ce ../test.data [A
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce ../test.data[1P [A
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Ce ../test.data [K[A
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[1Pe ../test.data 
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@[[1@]
+[ 22 43 12 56 64 42 11 22 0 ]
+[ 22 43 12 56 64 42 11 22 0 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ ./main [] ../test.data [3Pmake -f ../Makefile[C[6@./main deque ../test.data[C[6Pmake -f ../Makefile[C[6@./main deque ../test.data[C[6Pmake -f ../Makefile[C[6@./main deque ../test.data[C[6Pmake -f ../Makefile[C[6@./main deque ../test.data[C[6Pmake -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ make -f ../Makefile [3@./main [] ../test.data[C[3Pmake -f ../Makefile[C[3@./main [] ../test.data[C
+[ 22 43 12 56 64 42 11 22 ]
+[ 22 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ cat ../test.data
+22
+43
+12
+56
+64
+42
+11
+22
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ cat ../test.data./main [] ../test.data [3Pmake -f ../Makefile[C[3@./main [] ../test.data[C[3Pmake -f ../Makefile[C
+g++ -MT main.o -MMD -MP -MF .deps/main.d -g -Wall -std=c++17 -c main.cc
+g++ main.o -o main
+cat </dev/null >.gitignore
+echo .deps >.gitignore
+for t in main main.o; do echo $t >>.gitignore; done
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ make -f ../Makefile [4Pcat ../test.data./main [] ../test.data 
+[ 22 43 12 56 64 42 11 22 ]
+[ 22 43 12 56 64 42 11 22 ]
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises/1-out[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises/1-out[00m$ exit
+
+Script done on 2020-03-21 00:14:32-0400
+Script started on 2020-03-22 23:54:13-0400
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises[00m$ yay[K[K[Kcd De
+bash: cd: De: No such file or directory
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7/exercises[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7/exercises[00m$ d[Kcd ..
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b/work/lab7[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b/work/lab7[00m$ exit
+
+Script done on 2020-03-22 23:54:24-0400

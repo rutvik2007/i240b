@@ -24,15 +24,28 @@ void
 loopFn(Iterator begin, Iterator end, int arg)
 {
   std::vector<int> vec;
-  //@TODO
+  char seen = 0;
+  for(auto p = begin; p != end; p++){
+    if(*p == arg && !seen){
+      seen = 1;
+      continue;
+    }
+    vec.push_back(*p);
+  }
   outContainer(vec.begin(), vec.end());
+  
 }
 
 /** Exactly like loopFn() but no loops should be used */
 template <typename Iterator>
 void noLoopFn(Iterator begin, Iterator end, int arg)
 {
-  //@TODO
+  auto first_occurence = std::find(begin, end, arg);
+  std::vector<int> vec(begin, first_occurence);
+  if(first_occurence != end){
+    std::copy(++first_occurence, end, std::back_inserter(vec));
+  }
+  outContainer(vec.begin(), vec.end());
 }
 
 #endif //ifndef OUT_HH_
