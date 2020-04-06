@@ -1,3 +1,2 @@
 all:
-		cd ~/cs240
-		ls
+		cd ~/Desktop/cs240; ls
