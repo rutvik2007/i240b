@@ -1034,4 +1034,74 @@ Changes to be committed:
 	[32mnew file:   submit/lab9/lab9.umt[m
 	[32mnew file:   submit/lab9/lab9/hl-fine_blue.css[m
 	[32mnew file:   submit/lab9/lab9/hl-fine_blue.sty[m
-	[32mmodified:   work/lab8/exercises/3-subshell
+	[32mmodified:   work/lab8/exercises/3-subshells/Makefile[m
+	[32mnew file:   work/lab8/exercises/c-files.lst[m
+	[32mnew file:   work/lab8/exercises/lab8.log[m
+
+[1]+  Done                    gedit main.cc  (wd: ~/Desktop/cs240/i240b/work/lab9/exercises/4-time)
+(wd now: ~/Desktop/cs240/i240b)
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b[00m$ git push
+Username for 'https://github.com': rsaptar2
+Password for 'https://rsaptar2@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/rsaptar2/i240b/'
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b[00m$ git push
+Username for 'https://github.com': rsaptar2
+Password for 'https://rsaptar2@github.com': 
+Everything up-to-date
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b[00m$ git add .
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b[00m$ git commit
+hint: Waiting for your editor to close the file... [?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;45H(B[0;7m[ Reading File ](B[m[53;51H(B[0;7m 48 lines ](B[m[H(B[0;7m  GNU nano 2.9.3             /home/rutvik/Desktop/cs240/i240b/.git/COMMIT_EDITMSG                        [1;104H(B[m[54d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[55;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7mM-E(B[m Redo[53d[4d[39;49m[36m# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d#[7d# On branch master[8d# Your branch is up to date with 'origin/master'.[9d#[10d# Changes to be committed:[11d#       new file:   submit/lab9/exercises/.gitignore[12d#       new file:   submit/lab9/exercises/2-sorts/.gitignore[13d#       new file:   submit/lab9/exercises/2-sorts/main.cc[14d#       new file:   submit/lab9/exercises/2-sorts/sorts.cc[15d#       new file:   submit/lab9/exercises/2-sorts/sorts.hh[16d#       new file:   submit/lab9/exercises/3-stats/.gitignore[17d#       new file:   submit/lab9/exercises/3-stats/bubbleSort.png[18d#       new file:   submit/lab9/exercises/3-stats/insertionSort.png[19d#       new file:   submit/lab9/exercises/3-stats/main.cc[20d#       new file:   submit/lab9/exercises/3-stats/mergeSort.png[21d#       new file:   submit/lab9/exercises/3-stats/ops.cc[22d#       new file:   submit/lab9/exercises/3-stats/ops.hh[23d#       new file:   submit/lab9/exercises/3-stats/opscount.hh[24d#       new file:   submit/lab9/exercises/3-stats/quickSort.png[25d#       new file:   submit/lab9/exercises/3-stats/selectionSort.png[26d#       new file:   submit/lab9/exercises/3-stats/sorts.cc[27d#       new file:   submit/lab9/exercises/3-stats/sorts.hh[28d#       new file:   submit/lab9/exercises/4-time/.gitignore[29d#       new file:   submit/lab9/exercises/4-time/bubbleSort.png[30d#       new file:   submit/lab9/exercises/4-time/insertionSort.png[31d#       new file:   submit/lab9/exercises/4-time/main.cc[32d#       new file:   submit/lab9/exercises/4-time/mergeSort.png[33d#       new file:   submit/lab9/exercises/4-time/now.cc[34d#       new file:   submit/lab9/exercises/4-time/now.hh[35d#       new file:   submit/lab9/exercises/4-time/quickSort.png[36d#       new file:   submit/lab9/exercises/4-time/selectionSort.png[37d#       new file:   submit/lab9/exercises/4-time/sorts.cc[38d#       new file:   submit/lab9/exercises/4-time/sorts.hh[39d#       new file:   submit/lab9/exercises/Makefile[40d#       new file:   submit/lab9/exercises/lab9.log[41d#       new file:   submit/lab9/exercises/plot.gp[42d#       new file:   submit/lab9/lab9.html[43d#       new file:   submit/lab9/lab9.pdf[44d#       new file:   submit/lab9/lab9.umt[45d#       new file:   submit/lab9/lab9/hl-fine_blue.css[46d#       new file:   submit/lab9/lab9/hl-fine_blue.sty[47d#       modified:   work/lab8/exercises/3-subshells/Makefile[48d#       new file:   work/lab8/exercises/c-files.lst[49d#       new file:   work/lab8/exercises/lab8.log[50d#[3d[39m(B[m[?12l[?25h[?25l[1;96H(B[0;7mModified(B[m[3dd[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25le[?12l[?25h[?25l[1;104H[1;96H(B[0;7m        (B[m[53;44H(B[0;7m[ Wrote[53;62H(B[m[3;5H[?12l[?25h[?25l[53d[J[55;105H[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>[K[master 2c15ad0] done
+ 39 files changed, 8137 insertions(+), 2 deletions(-)
+ create mode 100644 submit/lab9/exercises/.gitignore
+ create mode 100644 submit/lab9/exercises/2-sorts/.gitignore
+ create mode 100644 submit/lab9/exercises/2-sorts/main.cc
+ create mode 100644 submit/lab9/exercises/2-sorts/sorts.cc
+ create mode 100644 submit/lab9/exercises/2-sorts/sorts.hh
+ create mode 100644 submit/lab9/exercises/3-stats/.gitignore
+ create mode 100644 submit/lab9/exercises/3-stats/bubbleSort.png
+ create mode 100644 submit/lab9/exercises/3-stats/insertionSort.png
+ create mode 100644 submit/lab9/exercises/3-stats/main.cc
+ create mode 100644 submit/lab9/exercises/3-stats/mergeSort.png
+ create mode 100644 submit/lab9/exercises/3-stats/ops.cc
+ create mode 100644 submit/lab9/exercises/3-stats/ops.hh
+ create mode 100644 submit/lab9/exercises/3-stats/opscount.hh
+ create mode 100644 submit/lab9/exercises/3-stats/quickSort.png
+ create mode 100644 submit/lab9/exercises/3-stats/selectionSort.png
+ create mode 100644 submit/lab9/exercises/3-stats/sorts.cc
+ create mode 100644 submit/lab9/exercises/3-stats/sorts.hh
+ create mode 100644 submit/lab9/exercises/4-time/.gitignore
+ create mode 100644 submit/lab9/exercises/4-time/bubbleSort.png
+ create mode 100644 submit/lab9/exercises/4-time/insertionSort.png
+ create mode 100644 submit/lab9/exercises/4-time/main.cc
+ create mode 100644 submit/lab9/exercises/4-time/mergeSort.png
+ create mode 100644 submit/lab9/exercises/4-time/now.cc
+ create mode 100644 submit/lab9/exercises/4-time/now.hh
+ create mode 100644 submit/lab9/exercises/4-time/quickSort.png
+ create mode 100644 submit/lab9/exercises/4-time/selectionSort.png
+ create mode 100644 submit/lab9/exercises/4-time/sorts.cc
+ create mode 100644 submit/lab9/exercises/4-time/sorts.hh
+ create mode 100644 submit/lab9/exercises/Makefile
+ create mode 100644 submit/lab9/exercises/lab9.log
+ create mode 100755 submit/lab9/exercises/plot.gp
+ create mode 100644 submit/lab9/lab9.html
+ create mode 100644 submit/lab9/lab9.pdf
+ create mode 100644 submit/lab9/lab9.umt
+ create mode 100644 submit/lab9/lab9/hl-fine_blue.css
+ create mode 100644 submit/lab9/lab9/hl-fine_blue.sty
+ create mode 100644 work/lab8/exercises/c-files.lst
+ create mode 100644 work/lab8/exercises/lab8.log
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b[00m$ git push
+Username for 'https://github.com': rsaptar2
+Password for 'https://rsaptar2@github.com': 
+Counting objects: 46, done.
+Delta compression using up to 8 threads.
+Compressing objects:   2% (1/39)   Compressing objects:   5% (2/39)   Compressing objects:   7% (3/39)   Compressing objects:  10% (4/39)   Compressing objects:  12% (5/39)   Compressing objects:  15% (6/39)   Compressing objects:  17% (7/39)   Compressing objects:  20% (8/39)   Compressing objects:  23% (9/39)   Compressing objects:  25% (10/39)   Compressing objects:  28% (11/39)   Compressing objects:  30% (12/39)   Compressing objects:  33% (13/39)   Compressing objects:  35% (14/39)   Compressing objects:  38% (15/39)   Compressing objects:  41% (16/39)   Compressing objects:  43% (17/39)   Compressing objects:  46% (18/39)   Compressing objects:  48% (19/39)   Compressing objects:  51% (20/39)   Compressing objects:  53% (21/39)   Compressing objects:  56% (22/39)   Compressing objects:  58% (23/39)   Compressing objects:  61% (24/39)   Compressing objects:  64% (25/39)   Compressing objects:  66% (26/39)   Compressing objects:  69% (27/39)   Compressing objects:  71% (28/39)   Compressing objects:  74% (29/39)   Compressing objects:  76% (30/39)   Compressing objects:  79% (31/39)   Compressing objects:  82% (32/39)   Compressing objects:  84% (33/39)   Compressing objects:  87% (34/39)   Compressing objects:  89% (35/39)   Compressing objects:  92% (36/39)   Compressing objects:  94% (37/39)   Compressing objects:  97% (38/39)   Compressing objects: 100% (39/39)   Compressing objects: 100% (39/39), done.
+Writing objects:   2% (1/46)   Writing objects:   4% (2/46)   Writing objects:   6% (3/46)   Writing objects:   8% (4/46)   Writing objects:  10% (5/46)   Writing objects:  13% (6/46)   Writing objects:  15% (7/46)   Writing objects:  17% (8/46)   Writing objects:  19% (9/46)   Writing objects:  21% (10/46)   Writing objects:  23% (11/46)   Writing objects:  26% (12/46)   Writing objects:  28% (13/46)   Writing objects:  30% (14/46)   Writing objects:  32% (15/46)   Writing objects:  34% (16/46)   Writing objects:  36% (17/46)   Writing objects:  39% (18/46)   Writing objects:  41% (19/46)   Writing objects:  43% (20/46)   Writing objects:  45% (21/46)   Writing objects:  47% (22/46)   Writing objects:  50% (23/46)   Writing objects:  52% (24/46)   Writing objects:  54% (25/46)   Writing objects:  56% (26/46)   Writing objects:  58% (27/46)   Writing objects:  60% (28/46)   Writing objects:  63% (29/46)   Writing objects:  65% (30/46)   Writing objects:  67% (31/46)   Writing objects:  69% (32/46)   Writing objects:  71% (33/46)   Writing objects:  73% (34/46)   Writing objects:  76% (35/46)   Writing objects:  78% (36/46)   Writing objects:  80% (37/46)   Writing objects:  82% (38/46)   Writing objects:  84% (39/46)   Writing objects:  86% (40/46)   Writing objects:  89% (41/46)   Writing objects:  91% (42/46)   Writing objects:  93% (43/46)   Writing objects:  95% (44/46)   Writing objects:  97% (45/46)   Writing objects: 100% (46/46)   Writing objects: 100% (46/46), 1.03 MiB | 9.34 MiB/s, done.
+Total 46 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/5)[Kremote: Resolving deltas:  40% (2/5)[Kremote: Resolving deltas:  60% (3/5)[Kremote: Resolving deltas:  80% (4/5)[Kremote: Resolving deltas: 100% (5/5)[Kremote: Resolving deltas: 100% (5/5), completed with 1 local object.[K
+To https://github.com/rsaptar2/i240b
+   3ee59b4..2c15ad0  master -> master
+]0;rutvik@rutvik-Nitro-AN517-51: ~/Desktop/cs240/i240b[01;32mrutvik@rutvik-Nitro-AN517-51[00m:[01;34m~/Desktop/cs240/i240b[00m$ exit
+
+Script done on 2020-04-06 02:28:50-0400
