@@ -4,7 +4,11 @@
 #include <iostream>
 #include <string>
 
+<<<<<<< HEAD
 //#include "command.hh"
+=======
+#include "command.hh"
+>>>>>>> ee3ef56b6108b3eccbc33e4d6253b3835549cb2c
 #include "seq.hh"
 
 using TestType = int;
